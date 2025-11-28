@@ -7,23 +7,31 @@ init python:
 init:
     default persistent.currentCharNote = "Tibbs"
 
+image tibbsEmote:
+    "removeThis.png"
+
 image notesPopUp = ConditionSwitch(
     "persistent.currentCharNote=='Dustin'","noteDustin.png",
     "persistent.currentCharNote=='Tibbs'","noteTibbs.png",
     "True","tibbsNote.png")
 
 screen emoteHandler:
+    imagebutton idle "gui/secretButton.png" action [Show("emoteView", emoteName="tibbsEmote")]:
+        align (0,0)
+        hover "gui/secretButtonHover.png"
+
+screen emoteHandlerCopy:
     frame:
         xpadding 10
         ypadding 10
         xalign 0.0
         yalign 0.0
-        textbutton "Test emote" action [Show("emoteView", emoteName="emote_urgay@2.png")]
+        imagebutton idle "secretButton.png" action [Show("emoteView", emoteName="tibbsEmote")]
 
 screen emoteView(emoteName):
     add emoteName at emotePath
-    timer 1.5 action [Hide("emoteView")]
-    on "show" action Play("channelEmote","objection.mp3")
+    timer 0.5 action [Hide("emoteView")]
+    on "show" action Play("channelEmote","SFX_kiss.ogg")
 
 screen inputBlocker:
     key "mouseup_1" action NullAction()

@@ -290,14 +290,14 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos 0.85
+        xpos 0.80
         yalign 0.5
         spacing gui.navigation_spacing
 
         if main_menu:
 
-            imagebutton idle "bookmarks/startBM.png" action Start() at titleMenuHover:
-                xpos -0.2
+            imagebutton idle "bookmarks/startBM3.png" action Start() at titleMenuHover:
+                xpos -0.1
             #hovered at titleMenuHover unhovered at titleMenuUnHover 
 
         else:
@@ -306,10 +306,10 @@ screen navigation():
 
             textbutton _("Save") action ShowMenu("save")
 
-        imagebutton idle "bookmarks/loadBM.png" action ShowMenu("load") at titleMenuHover:
-            xpos -0.2
+        imagebutton idle "bookmarks/loadBM2.png" action ShowMenu("load") at titleMenuHover:
+            xpos -0.1
 
-        imagebutton idle "bookmarks/prefBM.png" action ShowMenu("preferences") at titleMenuHover
+        imagebutton idle "bookmarks/prefBM2.png" action ShowMenu("preferences") at titleMenuHover
 
         if _in_replay:
 
@@ -319,18 +319,18 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        imagebutton idle "bookmarks/aboutBM.png" action ShowMenu("about") at titleMenuHover
+        imagebutton idle "bookmarks/aboutBM2.png" action ShowMenu("about") at titleMenuHover
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            imagebutton idle "bookmarks/helpBM.png" action ShowMenu("help") at titleMenuHover
+            imagebutton idle "bookmarks/helpBM2.png" action ShowMenu("help") at titleMenuHover
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            imagebutton idle "bookmarks/quitBM.png" action Quit(confirm=not main_menu) at titleMenuHover
+            imagebutton idle "bookmarks/quitBM2.png" action Quit(confirm=not main_menu) at titleMenuHover
 
 
 style navigation_button is gui_button

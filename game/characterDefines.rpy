@@ -5,12 +5,13 @@ define du2 = Character("Dustin?", color="#F26FCC")
 define ga = Character("Gavin", color="#626673")
 define ga2 = Character("Gavin?", color="#626673")
 define al = Character("Alby", color="#4363E8")
-define ma = Character("Marsh", color="#EDD782")
+define ma = Character("Marsh", color="#c7a663")
 define ma2 = Character("Marsh?",color="#c7a663")
 define ti = Character("Tibbs", color="#626673")
 define ti2 = Character("Tibbs?", color="#626673")
 define gu = Character("Camper")
 define unknown = Character("???")
+define dual = Character("Dustin & Alby") 
 
 image alby = "characters/Alby @2.webp"
 image alby frown = "characters/Alby frown @2.webp"
@@ -56,3 +57,4 @@ image dollBadger="itemBadgerDoll.webp"
 image dollBear="itemBearDoll.webp"
 image dollDog="itemDogDoll.webp"
 image dollWolf="itemWolfDoll.webp"
+image phone = "itemPhone.webp"

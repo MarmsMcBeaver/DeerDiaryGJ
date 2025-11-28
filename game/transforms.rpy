@@ -1,4 +1,4 @@
-init python:
+init -1 python:
     def appear_transform(trans, st, at):
         #trans.xanchor = 0.5
         #trans.yanchor = 1.0
@@ -8,6 +8,31 @@ init python:
         else:
             trans.xpos = 0.2
             return 0
+    
+    def playWoodNoise(trans,st,at):
+        renpy.play("SFX_Wood_Hits_5.ogg",channel="sound1")
+    def stopWoodNoise(trans,st,at):
+        renpy.music.stop(channel="sound1",fadeout=None)
+
+
+transform itemFight(xToOffset):
+    
+    easeout 0.1 xoffset xToOffset
+    function stopWoodNoise
+    function playWoodNoise
+    easeout 0.3 xoffset 0
+    pause 0.5
+    easeout 0.1 xoffset xToOffset
+    function stopWoodNoise
+    function playWoodNoise
+    easeout 0.2 xoffset 0
+    pause 0.1
+    easeout 0.1 xoffset xToOffset
+    function stopWoodNoise
+    function playWoodNoise
+    easeout 0.2 xoffset 0
+    pause 0.8
+    repeat
 
 #---Normal transforms---#
 transform testTransform:
@@ -17,7 +42,7 @@ transform testTransform:
     repeat
 
 transform reset:
-    offset (0,0)
+    linear 0.1 offset (0,0)
 
 transform appear(xValue):
     anchor (0.5,1.0)
@@ -28,9 +53,16 @@ transform appearAndFlip(xValue):
     pos (xValue,1.0)
     xzoom -1
 
-transform moveAndFlip(xToMove,speed):
-    linear 0.1 xzoom -1
+transform appearAndMove(xStarting, xToMove, speed):
+    anchor (0.5,1.0)
+    pos (xStarting,1.0)
     linear speed xpos xToMove
+
+transform moveAndFlip(xToMove,speed):
+    parallel:
+        linear 0.1 xzoom -1
+    parallel:
+        linear speed xpos xToMove
 
 transform moveAndUnFlip(xToMove,speed):
     linear 0.1 xzoom 1
@@ -72,6 +104,17 @@ transform jiggleVertical(intensity, speedMultiplier, waitTime):
     pause waitTime
     repeat
 
+transform hop:
+    easein 0.05 yoffset -80
+    easeout 0.05 yoffset 0
+
+transform lookAround(numberOfRepeats,startingDirection=1):
+    linear 0.1 xzoom startingDirection*-1
+    pause 1
+    linear 0.1 xzoom startingDirection
+    pause 1.0
+    repeat numberOfRepeats
+
 transform middleRight:
     xalign 1.0
     linear 2 xalign 0.7
@@ -95,18 +138,6 @@ transform itemDisappear(speed):
     parallel:
         linear speed zoom 0.1
 
-transform itemFight(xToOffset):
-    easeout 0.1 xoffset xToOffset
-    easeout 0.3 xoffset 0
-    pause 0.5
-    easeout 0.1 xoffset xToOffset
-    easeout 0.2 xoffset 0
-    pause 0.1
-    easeout 0.1 xoffset xToOffset
-    easeout 0.2 xoffset 0
-    pause 1
-    repeat
-
 
 #---Diary transforms---#
 
@@ -122,9 +153,16 @@ transform bookSequence1:
 
 transform diaryAppear(newPosX,newPosY,time):
     anchor (0.5,0.5)  
-    pos (0.5,2.0)
+    pos (0.5,-1.0)
     easein time pos (newPosX,newPosY)
 
+transform cgTyAppear(newPosX,newPosY,time):
+    anchor (0.5,0.5)  
+    pos (0.5,1.5)
+    easein time pos (newPosX,newPosY)
+
+transform cgTyDisappear(time):
+    easeout time pos(0.5,1.5)
 
 transform diaryMove(newPosX,newPosY,time):
     linear time pos (newPosX,newPosY)
@@ -146,7 +184,11 @@ transform testDiary1_3:
 
 transform emotePath:
     align (0.0,0.75)
-    linear 2 pos (0.05,0.6)
+    alpha 1.0
+    parallel:
+        linear 1 pos (0.05,0.6)
+    parallel:
+        linear 0.5 alpha 0.0
 
 
 
