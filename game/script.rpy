@@ -42,24 +42,6 @@ init:
     $ renpy.music.register_channel("channelEmote", mixer="sfx", loop=False)
 
 image removeThis = "removeThis.png"
-
-
-
-#marms is for testing, remove later
-layeredimage marms:
-    always:
-        "marms_base"
-
-    group clothing:
-        xpos 160
-        ypos 330
-        attribute bowtie:
-            zoom 0.3
-        attribute tophat:
-            zoom 0.3
-            xpos 160
-            ypos 0
-
 #this needs overhauled later once I implement a dialogue opacity option and I figure out how default and persistant values work fully
 default persistent.dialogueBoxOpacity = 1.0
 
@@ -69,7 +51,7 @@ label start:
     #show screen emoteHandler
     jump scene_Intro
     #jump scene5
-    
+    #jump testScene
 
 #----------------------------#
 #---------TEST SCENES--------#
@@ -78,14 +60,23 @@ label start:
 label testScene:
     $ persistent.dialogueBoxOpacity = 1.0
     scene bg registration
-    show alby at appear(0.5)
-    "start the thing"
-    $ renpy.play(getRandomPageNoise(),channel="sound1")
-    show alby
-    "finish here"
-    $ renpy.play(getRandomPageNoise(),channel="sound1")
-    "now flip"
-    $ renpy.play(getRandomPageNoise(),channel="sound1")
+    show dustin at appear(0.5)
+    "play voice1 Dustin_Angry_2"
+    play voice1 "Dustin_Angry_2.ogg"
+    "play voice1 Dustin_Affirm_1.ogg"
+    play voice1 "Dustin_Affirm_1.ogg"
+    "play voice1 Dustin_Greeting_3.ogg "
+    play voice1 "Dustin_Greeting_3.ogg" 
+    "play voice1 Dustin_Deer_2.ogg "
+    play voice1 "Dustin_Deer_2.ogg" 
+    "play voice1 Dustin_Fluster_1.ogg "
+    play voice1 "Dustin_Fluster_1.ogg" 
+    "play voice1 Dustin_Frustrated_3.ogg "
+    play voice1 "Dustin_Frustrated_3.ogg" 
+    "play voice1 Dustin_Fluster_1.ogg"
+    play voice1 "Dustin_Fluster_1.ogg"
+    "play voice1 Dustin_Interest_1.ogg "
+    play voice1 "Dustin_Interest_1.ogg" 
     
     
 
@@ -94,7 +85,7 @@ label testScene:
     show writing2 zorder 200
     show ty cg zorder 100
     show border zorder 50
-    jump endScene
+    jump sceneCredits
 
 
 label testCG:
@@ -188,12 +179,13 @@ label scene_Intro:
     hide screen inputBlocker
 
     scene bg registration
-    show dustin at appear(0.9)
-    show alby behind dustin at appear(0.6)
-    show ty at appearAndFlip(0.4)
+    show dustin at appear(0.8)
+    show alby behind dustin at appear(0.5)
+    show ty at appearAndFlip(0.2)
     $ persistent.dialogueBoxOpacity = 1.0
     with fade
-    play soundLoop1 "BGS_Forest_1.ogg" fadein 1.0 volume 0.5
+    play soundLoop1 "BGS_Forest_1.ogg" fadein 2.0 volume 0.5
+    play music1 "DEER DIARY - Tater Tot2.ogg" fadein 2 volume 0.8
     show dustin talk 
     du "I swear it’s really good! You gotta watch it!"
     show dustin 
@@ -203,11 +195,12 @@ label scene_Intro:
     stop voice1
     show alby 
     show dustin talk frown 
-    play voice1 "Dustin_Angry_2.ogg" volume 6.0
+    play voice1 "Dustin_Angry_2.ogg" volume 3.0
+    #play voice1 "Dustin_Angry_2.ogg"
     du "You can’t get your anime opinions from video essays!"
     stop voice1
     show dustin frown 
-    show alby talk at moveAndFlip(0.7,0.1)
+    show alby talk at moveAndFlip(0.5,0.1)
     al "What about you, Ty? You ever watch this Sword Guys Online show?"
     show alby 
     show ty talk 
@@ -218,14 +211,15 @@ label scene_Intro:
     show dustin shock 
     du "It’s Sword ART Online. Art! And it’s great, I promise!"
     show dustin frown 
-    show alby talk at moveAndUnFlip(0.7,0.1)
+    show alby talk at moveAndUnFlip(0.5,0.1)
     al "Whatever you say, big guy."
-    show alby at moveAndFlip(0.7,0.1)
+    show alby at moveAndFlip(0.5,0.1)
     pause 0.2
     show alby talk 
     show tibbs at appearAndFlip(-0.3)
     show marsh behind tibbs at appear(-0.3)
     al "Yo, Ranger Tibbs! When’s the bossman gonna get here? I need him to save me from this talk about mid anime."
+    show dustin at move(0.9,0.5)
     show alby at move(0.75,0.5)
     show ty at moveAndUnFlip(0.6,0.5)
     show tibbs talk at move(0.1,1)
@@ -247,7 +241,7 @@ label scene_Intro:
     ti "I’ve already prepared the agenda for today. Most of it is about preparations for the upcoming fall season."
     show tibbs 
     show marsh talk 
-    play voice1 "Marsh_Affirm_3.ogg"
+    play voice1 "Marsh_Affirm_3.ogg" volume 2.0
     ma "I couldn’t have said it better myself, Tibbs!"
     stop voice1
     show marsh 
@@ -285,7 +279,8 @@ label scene_Intro:
     stop voice1
     show tibbs
     show dustin talk 
-    play voice1 "Dustin_Affirm_1.ogg" volume 3.0
+    play voice1 "Dustin_Affirm_1.ogg" volume 1.5
+    #play voice1 "Dustin_Affirm_1.ogg"
     du "You got it!"
     stop voice1
     show dustin 
@@ -458,7 +453,7 @@ label scene_Intro:
     gu "Is it safe to take?"
     show camper1
     show tibbs talk
-    play voice1 "Tibs_02Treacherous_1.ogg"
+    #play voice1 "Tibs_02Treacherous_1.ogg"
     ti "It’s a bit more treacherous than the main paths, but people still use it pretty often. There’s this, uh, tree that runs along the river—damn it—what was it called? Marsh is always yapping about it. Anyway, it’s got these, uh, droopy things growing on it."
     stop voice1
     show tibbs 
@@ -466,7 +461,7 @@ label scene_Intro:
     gu "...Droopy things."
     show camper1
     show tibbs talk
-    play voice1 "Tibs_03ThingFlowers_1.ogg"
+    #play voice1 "Tibs_03ThingFlowers_1.ogg"
     ti "Yeah, the're like the things that turn into flowers."
     stop voice1
     show tibbs
@@ -482,7 +477,7 @@ label scene_Intro:
     gu "Okay, cool. Thanks for the help."
     show camper1
     show tibbs talk 
-    play voice1 "Tibs_05NoProblem_1.ogg"
+    #play voice1 "Tibs_05NoProblem_1.ogg"
     ti "No problem..."
     stop voice1
     show tibbs 
@@ -509,6 +504,7 @@ label scene_Intro:
     show dustin talk
     with vpunch
     play voice1 "Dustin_Greeting_3.ogg" volume 3.0
+    #play voice1 "Dustin_Greeting_3.ogg" 
     du "Heya, Ty!"
     stop voice1
     show ty talk:
@@ -516,10 +512,11 @@ label scene_Intro:
     show ty talk at move(0.5,1)
     show dustin
     play voice1 "Ty_Greeting_2.ogg"
-    ty "Hello, Dustin"
+    ty "Oh! Hello, Dustin."
     show ty
     show dustin talk
-    play voice1 "Dustin_Deer_2.ogg" volume 9.0
+    play voice1 "Dustin_Deer_2.ogg" volume 6.0
+    #play voice1 "Dustin_Deer_2.ogg" 
     du "What’re you standing around for, Ty-guy? You’re looking like a deer in headlights."
     stop voice1
     show dustin 
@@ -625,6 +622,7 @@ label scene_Intro:
     play voice1 "Ty_Confusion_1.ogg"
     ty "Dustin? What's wrong?"
     stop voice1
+    stop music1 fadeout 3
     jump scene1
 
 label scene1:
@@ -653,7 +651,8 @@ label scene1:
     show dustin shock at moveAndFlip(0.5,1)
     "Dustin nearly leaps out of his skin. Gavin turns to look at the commotion, and as two pairs of eyes fall on Dustin, the pink wolf turns white as a sheet."
     show dustin talk frown 
-    play voice1 "Dustin_Fluster_1.ogg" volume 8.0
+    play voice1 "Dustin_Fluster_1.ogg" volume 4.0
+    #play voice1 "Dustin_Fluster_1.ogg" 
     du " I–uh–I mean–um, what’s up?"
     stop voice1
     show dustin frown 
@@ -730,6 +729,7 @@ label scene1:
     show dustin
     #show alby at jiggle(40,0.2,2)
     play voice1 "Alby_Greeting_2.ogg"
+
     al "Hey, dudes! I’m in the back!"
     stop voice1
     show ty at move(0.15,1)
@@ -739,6 +739,7 @@ label scene1:
     show alby at jiggle(40,0.2,2)
     show dustin talk   
     play voice1 "Dustin_Frustrated_3.ogg" volume 5.0
+    #play voice1 "Dustin_Frustrated_3.ogg" 
     du "Dude, you just missed it. I totally just crashed and burned trying to talk to Gavin."
     stop voice1
     show dustin 
@@ -804,7 +805,7 @@ label scene1:
     "Alby whips out a small wooden figure of a bear that bears a striking resemblance to Marsh."
     show dollBear at jiggleVertical(20,0.2,0.5)
     show alby talk
-    play voice1 "Alby_Hewwo_1.ogg"
+    play voice1 "Alby_Hewwo_1.ogg" volume 1.3
     ma2 "Hewwo, hewwo, everyone! It’s me Marsh! Remember: littering is a crime, and criminals get fed to the bears!"
     stop voice1
     show alby
@@ -916,7 +917,7 @@ label scene1:
     show alby at toAndBackAgain(-500,0,1)
     "Alby swivels around me and swipes a fox mask off a display. He holds it at arms length, staring directly into the mask’s empty eye holes."
     show alby talk
-    play voice1 "Alby_Character_1.ogg"
+    play voice1 "Alby_Character_1.ogg" volume 1.4
     al "You have to feel the character. Become the character! Think not what to say, but what Tibbs would say in this very moment."
     stop voice1
     show alby 
@@ -1036,7 +1037,7 @@ label scene2:
     al "Dude, Marsh throws a holiday party like three times a month. We can just invite him to one of those. I can shmooze him up with you and then dip once you’re comfortable."
     show alby
     show dustin talk 
-    play voice1 "Dustin_Interest_2.ogg"
+    play voice1 "Dustin_Interest_2.ogg" volume 3.0
     du "That might actually work, huh...."
     stop voice1
     show dustin 
@@ -1072,7 +1073,7 @@ label scene2:
     stop voice1
     show alby 
     show dustin talk frown
-    play voice1 "Dustin_Confused_1.ogg"
+    play voice1 "Dustin_Confused_1.ogg" volume 3.0
     du "Tibbs? Ranger Tibbs? “Talk to me and get your face chewed off” Tibbs? With WHO?"
     stop voice1
     show dustin shock
@@ -1127,7 +1128,7 @@ label scene2:
     du "Yeah? So you’re saying you tried? How’d that work out for you?"
     show dustin frown 
     show alby talk 
-    play voice1 "Alby_Read_1.ogg"
+    play voice1 "Alby_Read_1.ogg" volume 2.0
     al "It was like the in-person equivalent of being left on read."
     stop voice1
     show alby 
@@ -1198,8 +1199,10 @@ label scene3:
     show marsh frown at appear(-0.2)
     show marsh talk frown at move(0.1,0.2)
     with dissolve
+    play voice1 "Marsh_Ty_1.ogg"
     ma "Ty! TY!! Where’s Dustin and Alby? We’ve got a problem!"
-    play music1 "DEER DIARY - Panik2.ogg" fadein 1
+    stop voice1
+    play music1 "DEER DIARY - Panik2.ogg" fadein 1 volume 0.3
     show marsh frown
     show ty talk behind dustin
     play voice1 "Ty_Surprise_2.ogg"
@@ -1212,7 +1215,9 @@ label scene3:
     du "Whoa! Where’s the fire?"
     show dustin frown
     show marsh talk frown
+    play voice1 "Marsh_Emergency_1.ogg"
     ma "There you are! There’s an emergency! A camper just got reported missing!"
+    stop voice1
     show marsh shock at jiggle(150,1,0)
     "Marsh begins worriedly pacing back and forth, chewing on the tips of his claws."
     show marsh talk frown
@@ -1238,7 +1243,9 @@ label scene3:
     with ease
     gu "My friend went out for a hike this morning and he hasn’t come back yet. I’ve looked everywhere for him, but I can’t find him anywhere."
     show marsh talk frown 
+    play voice1 "Marsh_FindHim_1.ogg" volume 2.0
     ma "We’ve GOT to find him! What if a bear got him? Or he fell into the river? Or, or—"
+    stop voice1
     show marsh frown
     gu "Oh my god!"
     show tibbs talk frown 
@@ -1247,7 +1254,9 @@ label scene3:
     stop voice1
     show tibbs frown 
     show marsh shock 
+    play voice1 "Marsh_SearchParty_1.ogg" volume 2.0
     ma "A search party won’t solve anything if he’s DEAD!!"
+    stop voice1
     gu "OH MY GOD!!"
     show tibbs talk
     ti "Alby, could you please get Marsh out of here before he whips anyone else into a frenzy."
@@ -1256,7 +1265,7 @@ label scene3:
     show camper2 worried at move(0.7,0.2)
     show ty frown at move(0.85,0.2)
     with ease
-    play voice1 "Alby_Sad_2.ogg"
+    play voice1 "Alby_Sad_2.ogg" volume 3.0
     al "Come on, bossman. Let’s see if we can get you a paper bag."
     stop voice1
     show marsh frown at move(0.25,cameraTime) 
@@ -1374,7 +1383,7 @@ label scene4:
     
     scene bg forest deep
     play soundLoop1 "BGS_Forest_1.ogg" fadein 1
-    show tibbs frown at appear (0.1)
+    show tibbs frown at appearAndFlip (0.1)
     show ty frown at appear (-0.2)
     with fade
     "Tibbs strides quickly through the brush, ignoring the path as he moves in a straight line into the depths of the woods. His head is low as he mutters in hushed frustration under his breath."
@@ -1410,7 +1419,7 @@ label scene4:
     pause 0.6
     show tibbs frown at moveAndUnFlip(0.7,0.1)
     "A twig snaps under my foot, and Tibbs spins on his heel to face me."
-    play voice1 "Tibs_Confused_1.ogg"
+    play voice1 "Tibs_Confused_1.ogg" volume 0.3
     show tibbs talk frown 
     ti "Wh—Ty? What are you doing here?"
     stop voice1
@@ -1475,7 +1484,7 @@ label scene4:
     show ty talk at move(0.25,0.5)
     ty "I understand, but we can’t just go running through the dark to find them."
     show ty 
-    show tibbs 
+    show tibbs talk
     ti " Yeah, you’re right. I…got ahead of myself. Let’s head back and regroup."
     show tibbs at lookAround(3,-1)
     pause 1
@@ -1509,7 +1518,7 @@ label scene4:
     show tibbs at moveAndFlip(0.8,0.1)
     "Tibbs scans the area, squinting at the growing darkness. He frowns."
     play voice1 "Tibs_Interested_1.ogg"
-    ti "HMM"
+    ti "Hmm..."
     stop voice1
     show ty talk 
     ty "Is something wrong?"
@@ -1680,7 +1689,8 @@ label scene5:
     al "The dude was looking for the river, but he somehow ended up going the complete opposite way."
     al "Not sure how that happened. He said he asked two different camp employees for directions."
     show dustin shock
-    play voice1 "Dustin_Fluster_1.ogg" volume 8.0
+    play voice1 "Dustin_Fluster_1.ogg" volume 3.0
+    #play voice1 "Dustin_Fluster_1.ogg"
     du "Uh, yeah, that’s so weird! Wonder who he talked to."
     stop voice1
     "Tibbs clears his throat"
@@ -1712,7 +1722,8 @@ label scene5:
     ti "It was your knowledge of the land that helped us return safely. I bet you could teach everyone here a thing or two about navigating the park."
     show tibbs 
     show dustin talk 
-    play voice1 "Dustin_Interest_1.ogg" volume 2.0
+    #play voice1 "Dustin_Interest_1.ogg" volume 2.0
+    play voice1 "Dustin_Interest_1.ogg" 
     du "Wait, really?!"
     stop voice1
     show dustin 
@@ -1767,8 +1778,8 @@ label scene5:
     show tibbs talk 
     ti "You jumped into action and kept a level head in a crisis. That’s a whole lot more than nothing. You know, you would make a pretty good park ranger. Better than me, anyway."
     show tibbs smile 
-    stop soundLoop1 fadeout 1
-    play music "DEER DIARY - Empathy -Two One Another-.ogg" fadein 1
+    stop soundLoop1 fadeout 5
+    play music "DEER DIARY - Empathy -Two One Another-.ogg" fadein 5
     "Better than me..."
     "My mouth hangs open in shock at Tibbs’ words. Better than him? Me? I’d never put myself on the same level as someone like Tibbs, let alone above him."
     "And yet…hearing that from him gives me a little bit of courage. Just enough to share my dream with Ranger Tibbs."
@@ -1826,7 +1837,7 @@ label scene5:
     show tibbs smile at move (1.3,2) 
     show ty smile at moveAndFlip(1.5,2)
     with None
-    jump sceneCreditsFake
+    jump sceneCredits
 
 label sceneCreditsFake:
 
@@ -1840,6 +1851,7 @@ label sceneCreditsFake:
     pause 4
     show continueButton zorder 200 onlayer AboveEverything
     #below scene code goes here
+    show bg black
     #below scene code ends here
     hide screen inputBlocker
     ""
@@ -1853,15 +1865,14 @@ label sceneCreditsFake:
     hide screen inputBlocker
     show continueButton zorder 200 onlayer AboveEverything
     ""
-    $ renpy.play(getRandomPageNoise(),channel="sound1")
+    window hide
     show screen inputBlocker
     hide continueButton
     hide table
     hide darkeningLayer
-    with dissolve
-    show tyWriting at cgTyDisappear(2)
-    show c10EndDoodle at diaryMove(0.5,-1.0,2)
-    with ease
+    hide tyWriting 
+    hide c10EndDoodle 
+    with fade
     pause 2.0
     hide screen inputBlocker
     jump sceneEnd
@@ -1878,6 +1889,7 @@ label sceneCredits:
     pause 4
     show continueButton zorder 200 onlayer AboveEverything
     #below scene code goes here
+    
     #below scene code ends here
     hide screen inputBlocker
     ""
@@ -1935,18 +1947,25 @@ label sceneCredits:
     hide screen inputBlocker
     show continueButton zorder 200 onlayer AboveEverything
     ""
-    $ renpy.play(getRandomPageNoise(),channel="sound1")
-    show screen inputBlocker
+    hide continueButton
+    window hide
+    #$ renpy.play(getRandomPageNoise(),channel="sound1")
+    #show screen inputBlocker
+    #hide continueButton
+    #hide table
+    #hide darkeningLayer
+    #with dissolve
+    #show cg10page5 at diaryMove(0.5,-1.0,2)
+    #with ease
+    #pause 2.0
+    #hide screen inputBlocker
+
+    pause 1
+    scene bg black 
     hide continueButton
     hide table
     hide darkeningLayer
-    with dissolve
-    show cg10page5 at diaryMove(0.5,-1.0,2)
-    with ease
-    pause 2.0
-    hide screen inputBlocker
-
-    scene bg black 
+    hide cg10page5
     with fade
     jump sceneEnd
 
