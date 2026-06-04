@@ -9,6 +9,7 @@ define ma = Character("Marsh", color="#c7a663")
 define ma2 = Character("Marsh?",color="#c7a663")
 define ti = Character("Tibbs", color="#626673")
 define ti2 = Character("Tibbs?", color="#626673")
+define re  = Character("Reed", color="#626673")
 define gu = Character("Camper")
 define unknown = Character("???")
 define dual = Character("Dustin & Alby") 
@@ -50,6 +51,9 @@ image ty frown= "characters/Ty frown @2.webp"
 image ty smile= "characters/Ty smile @2.webp"
 image ty talk= "characters/Ty talk @2.webp"
 image ty talk frown = "characters/Ty talk frown @2.webp"
+
+image reed = "characters/Ty @2.webp"
+image reed talk= "characters/Ty talk @2.webp"
 
 
 #----ITEMS----

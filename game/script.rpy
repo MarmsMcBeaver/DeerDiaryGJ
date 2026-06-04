@@ -49,7 +49,7 @@ label start:
     $ persistent.dialogueBoxOpacity = 1.0
     stop music fadeout 1
     #show screen emoteHandler
-    jump scene_Intro
+    jump scenario_Choice
     #jump scene5
     #jump testScene
 
@@ -144,6 +144,13 @@ label testCG2:
 #----------------------------#
 #---------MAIN SCENES--------#
 #----------------------------#
+
+label scenario_Choice:
+    menu:
+        "Ty's diary":
+            jump scene_Intro
+        "Dustin's diary":
+            jump DustinStart
 
 label scene_Intro:
     $ persistent.dialogueBoxOpacity = 1.0
