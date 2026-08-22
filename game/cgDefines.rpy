@@ -39,6 +39,26 @@ image tyWriting=Composite(
     (-150,0), "writing2"
 )
 
+#comic panels
+image comic1 = "CGs/SW panel 1.webp"
+image comic2 = "CGs/SW panel 2.webp"
+image comic3 = "CGs/SW panel 3.webp"
+image comic4 = "CGs/SW panel 4.webp"
+image comic5 = "CGs/SW panel 5.webp"
+image comic6 = "CGs/SW panel 6.webp"
+image comic7 = "CGs/SW panel 7.webp"
+image comic8 = "CGs/SW panel 8.webp"
+image comic9 = "CGs/SW panel 9.webp"
+image comic10 = "CGs/SW panel 10.webp"
+image comic11 = "CGs/SW panel 11.webp"
+image comic12= "CGs/SW panel 12.webp"
+image comic13= "CGs/SW panel 13.webp"
+image comic14= "CGs/SW panel 14.webp"
+image comic15= "CGs/SW panel 15.webp"
+image comic16= "CGs/SW panel 16.webp"
+image comic17= "CGs/SW panel 17.webp"
+
+
 #DOODLES 
 image tibbsDoodle = "CGs/journal doodle tibbs.webp"
 image dustinDoodle = "CGs/journal doodle dustin.webp"
@@ -217,3 +237,4 @@ image cg12page2 = Composite(
     (0,0), "marshDoodle",
     (1100,100), "cg12Page2Text"
 )
+

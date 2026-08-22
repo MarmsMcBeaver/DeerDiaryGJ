@@ -52,8 +52,8 @@ image ty smile= "characters/Ty smile @2.webp"
 image ty talk= "characters/Ty talk @2.webp"
 image ty talk frown = "characters/Ty talk frown @2.webp"
 
-image reed = "characters/Ty @2.webp"
-image reed talk= "characters/Ty talk @2.webp"
+image reed = "characters/reed @2.webp"
+image reed talk= "characters/reed talk @2.webp"
 
 
 #----ITEMS----
