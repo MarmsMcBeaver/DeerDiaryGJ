@@ -3,16 +3,18 @@ label DustinStart:
     "Work has been amazing, dude!"
     window hide
     play music1 "DEER DIARY - Sugar RUSH.ogg" fadein 1.0
+    show screen inputBlocker
     show comic1 with dissolve
-    pause
+    pause 1.5
     show comic2
-    pause
+    pause 1.5
     show comic3
-    pause
+    pause 1.5
     show comic4
-    pause
+    pause 1.5
     show comic5
-    pause
+    pause 1.5
+    hide screen inputBlocker
     scene black with dissolve
     #"Black screen, comic panel of Dustin holding his phone, the screen reads 'kawaii mix II' "
     #"A panel of him with head phones on, music plays out of them"
@@ -57,13 +59,13 @@ label DustinStart:
     show comic14
     pause
     stop music1 fadeout 1.0
+    jump DustinScene1
+
+label DustinScene1:
     window show
     scene bg campsite with fade
-
-    #"Cut to Dustin noticing the badger and staring like a deer in headlights. "
-    #"We transition to sprites, and campsite background. Dustin on the left and Gavin on the right "
     show dustin shock at appear (0.3)
-    show gavin at appear (0.8)
+    show gavin at appearAndFlip (0.8)
     "Oh God what do I do??? It's Gavin, the biggest hunkiest most handsome man in Break Trail - no, the WORLD!"
     "He started helping out around the park with repairs about a year ago now. Supposedly he's a family friend of Marsh, the campground manager."
     "I've had a teeny … tiny crush on him since he started helping out. Dude, I wanna talk to him so bad! "
@@ -73,54 +75,68 @@ label DustinStart:
     "Gavin walks around the back of his van. I hear the creak doors open and the sound of him fishing out some equipment. "
     "Now's my chance! I can walk up and say my patented pick up line."
     "'I hope you like dubs, cause I wanna see you more' "
+    show dustin shock zorder 100 at hop
     "The slam of the van’s rear doors snaps me back to reality"
     "walking back around the van with his tool bag, Gavin seems to finally notice me. Now's the time!!! "
+    show gavin at moveAndUnFlip (0.8, 1.0)
     "The badger glares, his handsome brown eyes burrowing holes right through me. "
     "It feels like time is frozen. Ok… just say “Hey! What's up?”. Easy Peasy. "
     "Wait, what if I come off too casual? He's older, so maybe he probably wants me to be more professional? "
     "So instead of what's up I just say… greetings? Salutations??? "
     "Oh god, how long has it been? He looks impatient "
+    show gavin zorder 100 at hop
     "Gavin waves."
     #"(Persona or fire emblem cut in panel of Dustin's face appearing here would be cute)"
     #FOR MARMS: i have teh cg all ready and in the directory, we just gotta get it all ready and looking good appearing behind the sprites with some flare. 
+    show gavin at move(0.9,0.5)
+    show dustin at move (0.1, 0.5)
+    show personaCutIn zorder 1 at jiggleVertical (8,0.01,0.01)
+    with CropMove(0.1,mode='wiperight', startcrop=(0.0, 0.0, 0.0, 1.0), startpos=(0.5, 0.5), endcrop=(0.0, 0.0, 1.0, 1.0), endpos=(0.5, 0.5), topnew=True)
     "An opening!  Here I go!!!! "
+    "..."
+    show dustin frown
+    hide personaCutIn with dissolve
+    "..."
+    show dustin frown at moveAndFlip(-0.3,1.0)
+    
     #for marms: we also gotta get this sequence flowing correct 
-    hide dustin shock
     #"The sound of a car door opening, remove dustins sprite, the sound of the door closing, and then the sound of a car speeding away. Leave gavin on screen for a bit before a question mark appears above his head. He walks off screen slowly. "
     #"Cut to background of a forest road, no sprites on screen "
-    scene bg forest drive with fade 
-
+    pause 1.5
+    scene bg forest drive with dissolve
     du "WHAT WAS THAT!???? "
     du "What the fuck man, why can't I just get it together. "
     
     "I curse to myself while letting out my frustrations in a deep groan. "
     "Well, I'm already driving off, might as well take my tools back to the groundskeeping office."
-    "The beautiful late fall colors pass by me as I drive down the lonely forest road. Soon they give way into a small quiet town. "
+    "The beautiful late fall colors pass by me as I drive down the lonely forest road. Soon they give way into a small quiet town. " 
+    jump DustinScene2
+
+label DustinScene2:
     scene bg drifters fault with fade
-    
-    #"Slowly cross fade background to drifters fault"
     "Drifter’s Fault, a tiny little ghost town in the north of the park. As Marsh would put it. 'This town is the jewel of the park'. "
     "Calling this place a jewel is kind of a reach."
     "It's falling apart, filthy and the few regulars we get would argue that the lake to the west is the real main attraction. "
     "Driving through main street I see the depressing barren streets and empty crumbling buildings. "
     "There's been some work to fix up these shops and put in amenities and educational centers but it's been so slow. "
     "We had a small gym open up, but besides that, the only real things in town are the offices of various park departments, Honeypot Cafe, and the gift shop."
+    show alby at appearAndMove(1.2,0.8,1.1)
     "Speaking of the gift shop, there it is now, and looks like a certain skunk is on his break!"
-    #"Alby's sprite slides on screen, he's turned to the right"
+    show alby at hop
     "I slam my paw on the trucks horn, causing the nearby large skunk to jump in surprise"
-    #"Sound of a car horn and Alby jumps, swap him to an angry sprite "
-    
+    show alby frown at moveAndFlip (0.8,0.1)
+    show dustin talk at appearAndMove(-0.1,0.25,1.0)
     du "Sup duder!!! "
-    
+    show dustin
     "I yell out to him from my truck window. Alby sends back a middle finger. Hahaha I gotta em good! "
     "Alby is one of my best friends here at the park. He’s got this energy about him that is so infectious. I love hanging out with him! "
     "I pull my truck into the totally empty parking spaces outside the gift shop and he walks up to my window"
-    show alby talk
+    show alby talk at move(0.75,0.5)
     al "What the hell! My heart almost stopped! "
-    show alby at appear(0.3)
-    
+    show alby
+    show dustin talk
     du "You jumped like a foot in the air! Didn't know you could get air time like that. "
-    
+    show dustin
     "His tail fur is still standing on end"
     show alby talk
     al "Yeah, yeah laugh it up, but keep one eye open when you sleep, pinkie pie."
@@ -129,13 +145,21 @@ label DustinStart:
     show alby talk
     al "So whatdya want? Just got out on break if you wanted to hang. "
     show alby
-    
+    show dustin talk
     du "Sweet! I'm almost done for the day myself, lemmie just drop these tools off and I'll meet you by the cafe? "
-    scene black with fade
+    scene black with dissolve
+    window hide
+    jump DustinScene3
+
+label DustinScene3:
+    window hide
+    pause 2.0
     scene bg drifters fault with fade
     play music1 "DEER DIARY-DriftersFault.ogg" fadein 1.0 
     #"Fade to black and Fade back in with Alby on the left and Dustin on the right, fade in drifters fault music."
-    show dustin talk at appear (0.2)
+    pause 1.0
+    show dustin talk at appear(0.75) with dissolve
+    show alby at appear (0.25) with dissolve
     du "Dude I reached Rank X last night!!!"
     show dustin
     show alby talk behind dustin
@@ -152,20 +176,25 @@ label DustinStart:
     show dustin
     show alby talk
     al "yeah cause it reminds you of your ninja waifu right? "
-    show alby
+    show alby at hop
+    show dustin at hop
     #"The sound of a bell ringing plays"
     "Dingaling"
+    show alby at moveAndFlip(0.65,1.0)
+    show dustin at move(0.8,1.0)
+    show reed at appearAndFlip(-0.2)
     "The sound of the cafe door opening halts our conversation. Stepping out is a blue jay with a coffee in one hand and a bagged pastry in the other." 
+    show reed at move(0.15,1.0)
     "The headphones they’re wearing are blasting music so loud i swear you can hear it a block away."
     "It’s Reed! Why are they here this early in the day?"
     "Reed works at Marsh's campground with Ty, but they are almost always on closing shift."
     show dustin talk
     du "Hey Reed!!!! "
-    show dustin
+    show dustin at hop
     "I shout as loud as I can while wildly waving my arms to get the punk’s attention. "
-    #"Reeds sprite comes in from the right"
+    show reed at move(0.25,1.5)
     "It seems to work! Taking off their headphones, they saunter on towards us."
-    show reed talk at appear(0.8)
+    show reed talk
     re "Sup, losers, need something? "
     show reed
     show dustin talk
@@ -258,13 +287,13 @@ label DustinStart:
     "Finishing off their pastry they pull out their phone and begin to wander away from the cafe. Alby and I are right alongside them."
     show alby talk
     al "I got you dude! Just let me schmooze Gavin up. I'll get his defenses lowered, then you swoop in for the kill! "
-    show alby
-    show alby talk
     al "You'll see why I'm the best wingman in the state! "
     show alby
-    hide alby 
-    hide reed 
+    hide alby with dissolve
+    hide reed with dissolve
     #"Alby and Reed slowly fade out as Dustin is moved to the center screen, the town music fades out and we are in silence."
+    stop music1 fadeout 3
+    show dustin frown
     "Can Alby really lower his defenses enough to give me a chance?"
     " Sure he's charismatic, but his power level definitely isn't that high.  Unless he's suppressing it somehow? "
     "But, even if Gavin is weakened.... He always has me trapped in some kind of genjutsu, or domain expansion.  I just ...can't speak around him. "
@@ -272,17 +301,19 @@ label DustinStart:
     "How am I only like this with him? I've picked up a lot of other guys before, but for him it's like… I'm scared? But … Why? "
     "It's then that I noticed I was so lost in thought I had stopped walking. Alby and Reed were continuing up the sidewalk without me. Fuck, I gotta catch up! "
     #"Dustin's sprite revs up a bit before zooming off to the left"
-    show dustin talk
+    show dustin talk at hop
     du "Hey! Wait up!"
-    show dustin
+    show dustin at move(-0.2, 1.0)
     scene black with fade
     scene bg drifters fault with fade
     
     #"Bring back Alby and reed, reed on the left Alby on the right. As Dustin comes zooming in from the right side of the screen. Play town ambiance audio"
-    show reed at appear (0.2) 
-    show alby at appear (0.48) behind reed
+    show reed at appearAndFlip (0.2) 
+    show alby at appearAndFlip (0.48) behind reed
+    with dissolve
     #For marms: udstin needs to come zooming in here from the right 
-    show dustin at appear (0.8)
+    pause 1.0
+    show dustin at appearAndMove (1.1,0.8,0.2)
     "I run as fast as I can to meet up with my friends. When I reach them, they’re both looking at Alby's phone, watching some kind of video? "
     show dustin talk
     du "Oh, whatchu got there? "
@@ -294,8 +325,7 @@ label DustinStart:
     al "Y'all didn't believe me when I said there was a cryptid in the park but look!  "
     show alby
     #this should slide in from bottom
-    show comic15
-    #"A comic panel of Alby holding the phone up appears. The album art for the podcast is Cthulhu in sunglasses. 'Cool'thulhu"
+    show comic15 at itemAppear(0.5,0.5,0.8)
     #"to find the unexplained' is written above it with 'expedition 180-the breaktrail beast' Below it. Clicking on this will play audio from the episode as an easter egg"
     "A paranormal podcast? Didn't expect Alby to be into silly things like this? I don't put much stock into bigfoots and kappas. Sure they're fun stories but there's no way they are real... Right? "
     "The thought of an actual monster at Break Trail sends a shiver up my spine. I let out a nervous laugh in an attempt to steel my nerves"
@@ -306,12 +336,13 @@ label DustinStart:
     show dustin talk
     du "'Mothman, my secret ex-lover! Not click bait!' "
     show dustin
+    show comic15 at itemDisappear(0.8)
     "Alby cracks a smile, and I swear I hear reed chuckle. Making my friends laugh fills me with a small bit of pride."
+    hide comic15
     show alby talk
     al "This beauty is different though! It's real! I swear I've seen it a few times!"
     show alby
     hide comic15
-    #"The comic panel fades downward"
     show alby talk
     al "Near the edge of town and by camp reg. It likes to come out at night and creep around like it's looking for something or… someone."
     show alby
@@ -331,44 +362,51 @@ label DustinStart:
     show dustin talk
     du "Wow Reed… I didn't think you cared that much about this place."
     show dustin
+    show reed at hop
     "Reed flinches, caught off guard by my remark"
     show reed talk
     re "Of course I care. We all have our own reasons for working here, you know."
     show reed
+    show reed at moveAndUnFlip(-0.8,1.6)
+    show alby at move(-0.52,1.6)
+    show dustin at move(-0.2,1.6)
     #"All the sprites walk off to the left as if walking away"
     #"Change the drifters fault big to an edited sun set version. The sound of crickets plays in the empty audio space"
-    hide reed
-    hide alby
-    hide dustin
     stop music1 fadeout 1.0
+    jump DustinScene4
+
+label DustinScene4:
+    scene black with fade
 
     "We continue our walk as the sky begins to darken. It always catches me off guard how early into the day night approaches in the autumn."
     "The last few crickets of the season begin singing their song, and the cool night wind gently blows through my fur. The smell it carries brings back melancholic memories of coming home after high school football practice."
+    scene bg park with dissolve
     "We reach a small park near the center of town. A tall statue of pioneers sits in the center, their hands on their brows as their eyes scan the horizon."
     "Stone benches circle the statue on all sides, each one pointed at plaques on the statue’s base explaining the history of the park, the town, and meaning of the statue."
+    show reed at appearAndFlip(-0.2)
     "Various native plants line the edges of the park, I'm all too familiar with them, seeing as I’m the one who help plant all these earlier in the spring. "
-    #"Reed walks from the left onto screen "
-    show reed talk
+    show reed at move(0.4,1.0)
+    pause 1.0
+    show reed talk at moveAndUnFlip(0.4,0.2)
     re "Well, it's been swell, but I'm already late to my shift. Don't want that bear worrying about me."
-    show reed
-    show reed talk
     re "See you losers at the party."
-    show reed
-    hide reed
-    #"Reeds sprite walks off screen to the left and Dustin and Alby slide on screen "
+    show reed at moveAndFlip (1.2,1.5)
+    show dustin at appearAndMove(-0.1,0.55,2.0)
+    show alby behind dustin at appearAndMove(-0.4,0.25, 2.0) 
     "We both wave goodbye to the bird. Alby and I stand in silence for a bit as Reed turns out of sight towards the campground. "
+    hide reed
+    show dustin frown at hop
     "Alby catches me off guard with a chuckle and a punch to the shoulder that was way harder than it needed to be…. Definitely pay back from earlier.  "
     show alby talk
     al "Hehe, so, you excited?"
     show alby
+    show dustin at move (0.7,0.5)
     "He's beaming with pride at his scheme. "
     "While yes, I am excited for the party, that familiar anxiety builds up again. And I can tell I'm not hiding it well. Alby's smirk fades and I can see the concern on his face.  "
     play music1 "DEER DIARY-SugarCrash.ogg" fadein 1.0
     "I let out a large groan and make my way over to a bench by the statue."
     show dustin talk frown
     du "No dude…. I… I think there's something wrong with me. "
-    show dustin frown
-    show dustin talk frown
     du "No matter what I do. I just freeze up, and it's like…I'm trapped inside myself? Nothing comes out, and … uuugh!"
     show dustin frown
     "This frustrated feeling builds up within me, my fists ball up and shake, as I swear I can hear my teeth clenching"
@@ -377,47 +415,72 @@ label DustinStart:
     "I hear his foots steps approaching me, and suddenly"
     hide dustin frown
     hide alby
-    show comic16
+    with dissolve
+    show comic16 at itemAppear(0.5,0.5,1.0)
     "The brim of my hat is suddenly shoved over my eyes, the world plunged in darkness"
     du "Hey! "
     "I scramble to correct my hat back into its proper fashionable position."
     al "There's nothing wrong with you dude."
     " He smiles gently at me before plopping down next to me on the bench."
     al "You're just a little nerd overflowing with emotions,  and they're all trying to come out at once. "
-    hide comic16 
-    show alby at appear (0.2)
+    show comic16 at itemDisappear(1.0)
+    pause 1.0
+    show alby talk at appear (0.2)
     show dustin frown at appear (0.8)
+    with dissolve
     al "That's completely normal. Don't beat yourself up over this. It ain't like you"
+    hide comic16
+    show alby
     "I give Alby a skeptical glare."
+    show dustin frown talk
     du " OK but how do I actually get these feelings out?"
+    show dustin frown
     "Alby looks away almost embarrassed about what he's going to say next"
+    show alby talk
     al "You know …. I heard this saying somewhere. That a hero’s feet move automatically when someone's in danger? I think?"
     al "Well, um...  it's gonna be like that."
     al "When the time is right, you will know exactly what to say to Gavin."
     al "Just think long and hard about what you wanna say before hand, and it'll all flow like butter on pancakes"
+    show alby at move(0.4,1.5)
     "He lifts himself up to his feet with a grunt and stands before me."
+    show alby talk
     al "The most important thing is you treat him like you do the rest of us, and you have basically no filter there …. Just maybe ease into the anime stuff."
+    show alby at move(0.55,0.5)
     "He gently places his hand on my shoulder. It's a small gesture but it sends a feeling of warmth through me"
+    show alby talk at move(0.4,0.5)
     al "You've got this."
+    show dustin talk
+    show alby
     du "…. Y-yeah.. thanks man."
+    show dustin
     "The small embrace is over before I know it. Alby shoves his hands Into his pockets and flashes me a grin"
+    show alby talk 
     al "Well, I've definitely been on break for way more than thirty minutes… and you should head home and get ready for tonight."
     al "Don't wanna talk to senpai covered in sweat and grass clippings. See you at the cabin tonight "
+    show alby
+    pause 1.0
+    show alby at moveAndFlip(-0.3,2.5)
     "And with a wave he turns on his heels and saunters in the direction of the gift shop."
+    hide alby
+    
     stop music1 fadeout 2.0
+    show dustin frown at move(0.5,1.0)
     "It's just me now. "
     "I steel myself, pumping my fists into the air. No matter what, tonight I'll face my fears and talk to him."
     "Glancing at the statue in front of me, my eyes catch the plaque underneath the pioneers."
     "'Forge your own Break Trail.'"
     "'Pursue your destiny.'"
-    scene black with fade
+    window hide
+    scene black with dissolve
+    pause 1.5
     #need to get a cabin BG from a free image site
-    scene bg park with fade
+    scene bg park with dissolve
     "When the time to party arrives the sun has fully set and the darkness I associate with fall takes over."
     "I make my way down the dark quiet trail when a beacon of light and music shines before me."
     "The event is happening at Marsh's personal cabin, He lives in one of the smaller cabins in the park"
     "That small size is showing as it looks like people are overflowing out of the cabin and standing outside near the entrance. "
     "I make my way past my coworkers out front, waving to a few and I pass, and squeeze my way inside"
+    scene bg campsite with dissolve
     #Inside of house background
     #Party music playing 
     #everything after this point has not been through the editor, i will go through and update with the finished script when i get it!

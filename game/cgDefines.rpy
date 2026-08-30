@@ -95,6 +95,9 @@ image writing2:
     pause 1.1
     repeat
 
+#Misc
+image personaCutIn = "CGs/dustinCutIn.webp"
+
 #THE ACTUAL CGs
 
 image cg1 = Composite(
