@@ -50,7 +50,7 @@ label DustinStart:
     window show
     #"A van pulls up alongside Dustin's truck"
     "I just love hanging out and talking to everyone here!"
-    "And you know me, I can talk anyone's ears off! "
+    "And you know me, I can talk anyone's ear off!"
     #"Gavin steps out of the van"
     window hide
     pause
@@ -66,18 +66,18 @@ label DustinScene1:
     scene bg campsite with fade
     show dustin shock at appear (0.3)
     show gavin at appearAndFlip (0.8)
-    "Oh God what do I do??? It's Gavin, the biggest hunkiest most handsome man in Break Trail - no, the WORLD!"
+    "Oh God what do I do??? It's Gavin, the biggest hunkiest most handsomest man in Break Trail - no, the WORLD!"
     "He started helping out around the park with repairs about a year ago now. Supposedly he's a family friend of Marsh, the campground manager."
     "I've had a teeny … tiny crush on him since he started helping out. Dude, I wanna talk to him so bad! "
     "Just gotta slide on over and woo him with my natural charm!"
     #"A thought bubble appears near Dustin, showing a chibi Dustin flexing while holding a rose in his mouth, and a Gavin with hearts in his eyes. Either Gavin's voice actor or Dustin's doing an impression saying 'oooohh Dustin you're so dreamy!!!!'"
     "But everytime I see him I just can't move! "
-    "Gavin walks around the back of his van. I hear the creak doors open and the sound of him fishing out some equipment. "
+    "Gavin walks around the back of his van. I hear the doors creak open and the sound of him fishing out some equipment."
     "Now's my chance! I can walk up and say my patented pick up line."
     "'I hope you like dubs, cause I wanna see you more' "
     show dustin shock zorder 100 at hop
     "The slam of the van’s rear doors snaps me back to reality"
-    "walking back around the van with his tool bag, Gavin seems to finally notice me. Now's the time!!! "
+    "Walking back around the van with his tool bag, Gavin seems to finally notice me. Ok, today's the day!!!"
     show gavin at moveAndUnFlip (0.8, 1.0)
     "The badger glares, his handsome brown eyes burrowing holes right through me. "
     "It feels like time is frozen. Ok… just say “Hey! What's up?”. Easy Peasy. "
@@ -109,27 +109,27 @@ label DustinScene1:
     
     "I curse to myself while letting out my frustrations in a deep groan. "
     "Well, I'm already driving off, might as well take my tools back to the groundskeeping office."
-    "The beautiful late fall colors pass by me as I drive down the lonely forest road. Soon they give way into a small quiet town. " 
+    "The late fall colors whizz by me as I drive down the lonely forest road. Soon they give way to a small, quiet town." 
     jump DustinScene2
 
 label DustinScene2:
     scene bg drifters fault with fade
     "Drifter’s Fault, a tiny little ghost town in the north of the park. As Marsh would put it. 'This town is the jewel of the park'. "
     "Calling this place a jewel is kind of a reach."
-    "It's falling apart, filthy and the few regulars we get would argue that the lake to the west is the real main attraction. "
+    "It's falling apart, filthy, and the few regulars we get would argue that the lake to the west is the real main attraction."
     "Driving through main street I see the depressing barren streets and empty crumbling buildings. "
     "There's been some work to fix up these shops and put in amenities and educational centers but it's been so slow. "
-    "We had a small gym open up, but besides that, the only real things in town are the offices of various park departments, Honeypot Cafe, and the gift shop."
+    "They finally re-opened the town's 'historic' gym, but otherwise, the only real things in town are the offices of various park departments, Honeypot Cafe, and the gift shop."
     show alby at appearAndMove(1.2,0.8,1.1)
     "Speaking of the gift shop, there it is now, and looks like a certain skunk is on his break!"
     show alby at hop
-    "I slam my paw on the trucks horn, causing the nearby large skunk to jump in surprise"
+    "I slam my paw on the trucks horn, causing the large skunk to jump in surprise"
     show alby frown at moveAndFlip (0.8,0.1)
     show dustin talk at appearAndMove(-0.1,0.25,1.0)
     play music1 "DEER DIARY - Friendly Faces.ogg"
     du "Sup duder!!! "
     show dustin
-    "I yell out to him from my truck window. Alby sends back a middle finger. Hahaha I gotta em good! "
+    "I yell out to him from my truck window. Alby shoots back a middle finger. Hahaha I gotta em good!"
     "Alby is one of my best friends here at the park. He’s got this energy about him that is so infectious. I love hanging out with him! "
     "I pull my truck into the totally empty parking spaces outside the gift shop and he walks up to my window"
     show alby talk at move(0.75,0.5)
@@ -147,7 +147,7 @@ label DustinScene2:
     al "So whatdya want? Just got out on break if you wanted to hang. "
     show alby
     show dustin talk
-    du "Sweet! I'm almost done for the day myself, lemmie just drop these tools off and I'll meet you by the cafe? "
+    du "Sweet! I'm almost done for the day myself. Lemme just drop these tools off and I'll meet you by the cafe?"
     stop music1 fadeout 1.0
     scene black with dissolve
     window hide
@@ -187,7 +187,7 @@ label DustinScene3:
     show reed at appearAndFlip(-0.2)
     "The sound of the cafe door opening halts our conversation. Stepping out is a blue jay with a coffee in one hand and a bagged pastry in the other." 
     show reed at move(0.15,1.0)
-    "The headphones they’re wearing are blasting music so loud i swear you can hear it a block away."
+    "The headphones they’re wearing are blasting music so loud I swear you can hear it a block away."
     "It’s Reed! Why are they here this early in the day?"
     "Reed works at Marsh's campground with Ty, but they are almost always on closing shift."
     show dustin talk
@@ -214,18 +214,19 @@ label DustinScene3:
     show alby talk
     al "Oh yeah the party's happening tonight. I should skip lunch so I can fill up on all the free grub Marsh’s gonna bring. "
     show alby
-    "Party!??? "
     show dustin frown talk
+    du "Party!??? "
+    
     du "What party? "
     show dustin frown
     show reed talk
-    re "No way, you forgot man?  We were all told about this weeks ago. The all hands meeting? Marsh made sure we all knew."
+    re "No way, you forgot man?  We were all told about this weeks ago. The all-hands meeting? Marsh made sure we all knew."
     show reed
     show dustin frown talk
     du "I don't remember that meeting at all???"
     show dustin frown
     show alby talk
-    al "Yeah, that's cause you were too busy trying to buy that waifu statue on your phone the entire time."
+    al "Yeah, that's ‘cause you were too busy trying to buy that waifu statue on your phone the entire time."
     show alby
     "Alby chuckles to himself and my face goes deep red. "
     "My favorite vtuber released new debut merch! I had to get it before it sold out!"
@@ -241,17 +242,17 @@ label DustinScene3:
     re "Well… Marsh wants to raise everyone's spirits, so he's throwing a little party for everyone who works at the park."
     show reed
     show reed talk
-    re "It's incredibly naive and barely a bandaid on the wound, but …it's sweet. And honestly, I'll take anything good at this point."
+    re "It's incredibly naive and barely a bandaid on the wound, but…it's sweet. And honestly, I'll take anything good at this point"
     show reed
     "Marsh may be heading our little guerilla park improvement squad, but even he's gotta bend to the actual people in charge"
-    "Of course boss man would do his best to cheer us all up though. a party sounds rad as hell"
-    "I can't stop my wagging tail as excitement builds. "
+    "Of course boss man would do his best to cheer us all up, though. A party sounds rad as hell."
+    "I can't stop my wagging tail as my excitement builds."
     show dustin talk
-    du "Gaaaahh this is gonna be so much fun!!! "
+    du "Gaaaahh, this is gonna be so much fun!!!"
     show dustin
     "Alby chuckles besides me."
     show alby talk
-    al "Let me get you even more excited. Guess who's gonna be there."
+    al "Let me get you even more excited. Guess who's gonna be there?"
     show alby
     "I tilt my head in confusion."
     show dustin talk
@@ -268,22 +269,22 @@ label DustinScene3:
     show dustin frown talk
     du "Why is he gonna be there? "
     show dustin frown
-    "A smug grin creeps over Albys face"
+    "A smug grin creeps over Alby's face."
     show alby talk
     al "A certain handsome skunk convinced Marsh it would be a good idea to invite Gavin and the rest of his team along."
     show alby
-    "He's practically beaming with pride"
+    "He's practically beaming with pride."
     show alby talk
     al "Don't think I forgot about our little plan to set you guys up."
     show alby
     show dustin talk
-    du "….     Oh!  That's right, invite him to one of Marsh's events!"
+    du "……… Oh!  That's right, invite him to one of Marsh's events!"
     show dustin
     show reed talk
     re "Have you been scheming to get Dustin with Gavin?"
     show reed
     show alby talk
-    al "I wouldn't say it's a scheme just … a well thought out plan."
+    al "I wouldn't say it's a scheme just… a well thought out plan."
     show alby
     "Reed rolls their eyes with an annoyed scoff. Clearly they want nothing to do with Alby's plan."
     "Finishing off their pastry they pull out their phone and begin to wander away from the cafe. Alby and I are right alongside them."
@@ -298,9 +299,9 @@ label DustinScene3:
     show dustin frown
     "Can Alby really lower his defenses enough to give me a chance?"
     " Sure he's charismatic, but his power level definitely isn't that high.  Unless he's suppressing it somehow? "
-    "But, even if Gavin is weakened.... He always has me trapped in some kind of genjutsu, or domain expansion.  I just ...can't speak around him. "
+    "Even if Gavin is weakened… he always has me trapped in some kind of Genjutsu, or Domain expansion.  I just …can’t speak around him."
     "Hell, even now, my heart is beating like crazy and my paws are sweating. "
-    "How am I only like this with him? I've picked up a lot of other guys before, but for him it's like… I'm scared? But … Why? "
+    "How am I only like this with him? I've picked up a lot of other guys before, but for him it's like… I'm scared? But… Why?"
     "It's then that I noticed I was so lost in thought I had stopped walking. Alby and Reed were continuing up the sidewalk without me. Fuck, I gotta catch up! "
     #"Dustin's sprite revs up a bit before zooming off to the left"
     show dustin talk at hop
@@ -339,7 +340,7 @@ label DustinScene3:
     du "'Mothman, my secret ex-lover! Not click bait!' "
     show dustin
     show comic15 at itemDisappear(0.8)
-    "Alby cracks a smile, and I swear I hear reed chuckle. Making my friends laugh fills me with a small bit of pride."
+    "Alby cracks a smile, and I swear I hear reed stifling a chuckle. Making my friends laugh fills me with a small bit of pride."
     hide comic15
     show alby talk
     al "This beauty is different though! It's real! I swear I've seen it a few times!"
@@ -386,19 +387,19 @@ label DustinScene4:
     "We reach a small park near the center of town. A tall statue of pioneers sits in the center, their hands on their brows as their eyes scan the horizon."
     "Stone benches circle the statue on all sides, each one pointed at plaques on the statue’s base explaining the history of the park, the town, and meaning of the statue."
     show reed at appearAndFlip(-0.2)
-    "Various native plants line the edges of the park, I'm all too familiar with them, seeing as I’m the one who help plant all these earlier in the spring. "
+    "Various native plants line the edges of the park. I'm all too familiar with them, seeing as I’m the one who helped plant all these earlier in the spring."
     show reed at move(0.4,1.0)
     pause 1.0
     show reed talk at moveAndUnFlip(0.4,0.2)
     re "Well, it's been swell, but I'm already late to my shift. Don't want that bear worrying about me."
-    re "See you losers at the party."
+    re "See you losers at the party!"
     show reed at moveAndFlip (1.2,1.5)
     show dustin at appearAndMove(-0.1,0.55,2.0)
     show alby behind dustin at appearAndMove(-0.4,0.25, 2.0) 
     "We both wave goodbye to the bird. Alby and I stand in silence for a bit as Reed turns out of sight towards the campground. "
     hide reed
     show dustin frown at hop
-    "Alby catches me off guard with a chuckle and a punch to the shoulder that was way harder than it needed to be…. Definitely pay back from earlier.  "
+    "Alby catches me off guard with a chuckle and a punch to the shoulder that was way harder than it needed to be… Definitely pay back from earlier."
     show alby talk
     al "Hehe, so, you excited?"
     show alby
@@ -409,22 +410,22 @@ label DustinScene4:
     "I let out a large groan and make my way over to a bench by the statue."
     show dustin talk frown
     du "No dude…. I… I think there's something wrong with me. "
-    du "No matter what I do. I just freeze up, and it's like…I'm trapped inside myself? Nothing comes out, and … uuugh!"
+    du "No matter what I do. I just freeze up, and it's like…I'm trapped inside myself? Nothing comes out, and … Uuugh!"
     show dustin frown
-    "This frustrated feeling builds up within me, my fists ball up and shake, as I swear I can hear my teeth clenching"
-    "Just as these feelings are about to reach a peak, I'm swiftly pulled out of it by Alby's laugh"
+    "This frustrated feeling builds up within me, my fists ball up and shake, and I swear I can hear my teeth clenching"
+    "Just as these feelings are about to reach a peak, I'm swiftly pulled out of it by Alby's laugh."
     "It's gentle."
-    "I hear his foots steps approaching me, and suddenly"
+    "I hear his footsteps approaching me, and suddenly…"
     hide dustin frown
     hide alby
     with dissolve
     show comic16 at itemAppear(0.5,0.5,1.0)
-    "The brim of my hat is suddenly shoved over my eyes, the world plunged in darkness"
+    "The brim of my hat is suddenly shoved over my eyes, the world plunged in darkness!"
     du "Hey! "
     "I scramble to correct my hat back into its proper fashionable position."
     al "There's nothing wrong with you dude."
     " He smiles gently at me before plopping down next to me on the bench."
-    al "You're just a little nerd overflowing with emotions,  and they're all trying to come out at once. "
+    al "You're just a little nerd overflowing with emotions, and they're all trying to come out at once"
     show comic16 at itemDisappear(1.0)
     pause 1.0
     show alby talk at appear (0.2)
@@ -439,26 +440,26 @@ label DustinScene4:
     show dustin frown
     "Alby looks away almost embarrassed about what he's going to say next"
     show alby talk
-    al "You know …. I heard this saying somewhere. That a hero’s feet move automatically when someone's in danger? I think?"
-    al "Well, um...  it's gonna be like that."
+    al "You know… I heard this saying somewhere. That a hero’s feet move automatically when someone's in danger? I think?"
+    al "Well, um... it's gonna be like that."
     al "When the time is right, you will know exactly what to say to Gavin."
-    al "Just think long and hard about what you wanna say before hand, and it'll all flow like butter on pancakes"
+    al "Just think long and hard about what you wanna say before hand, and it'll all flow like butter on pancakes."
     show alby at move(0.4,1.5)
     "He lifts himself up to his feet with a grunt and stands before me."
     show alby talk
-    al "The most important thing is you treat him like you do the rest of us, and you have basically no filter there …. Just maybe ease into the anime stuff."
+    al "The most important thing is you treat him like you do the rest of us, and you have basically no filter there… Just maybe ease into the anime stuff."
     show alby at move(0.55,0.5)
     "He gently places his hand on my shoulder. It's a small gesture but it sends a feeling of warmth through me"
     show alby talk at move(0.4,0.5)
     al "You've got this."
     show dustin talk
     show alby
-    du "…. Y-yeah.. thanks man."
+    du "… Y-yeah… thanks man."
     show dustin
     "The small embrace is over before I know it. Alby shoves his hands Into his pockets and flashes me a grin"
     show alby talk 
     al "Well, I've definitely been on break for way more than thirty minutes… and you should head home and get ready for tonight."
-    al "Don't wanna talk to senpai covered in sweat and grass clippings. See you at the cabin tonight "
+    al "Don't wanna talk to senpai covered in sweat and grass clippings. See you at the cabin tonight"
     show alby
     pause 1.0
     show alby at moveAndFlip(-0.3,2.5)
@@ -481,15 +482,15 @@ label DustinScene4:
     "I make my way down the dark quiet trail when a beacon of light and music shines before me."
     "The event is happening at Marsh's personal cabin, He lives in one of the smaller cabins in the park"
     "That small size is showing as it looks like people are overflowing out of the cabin and standing outside near the entrance. "
-    "I make my way past my coworkers out front, waving to a few and I pass, and squeeze my way inside"
+    "I make my way past my coworkers out front, waving to a few as I pass, and squeeze my way inside. "
     scene bg marsh cabin interiorparty with dissolve
     #Inside of house background
     #Party music playing 
     #everything after this point has not been through the editor, i will go through and update with the finished script when i get it!
-    "My suspicions were correct. This place is packed! "
+    "My suspicions were correct... This place is packed!"
     "People are squeezed from one side of the cabin to the other!"
-    "Huh, I didn't think this many park workers would even show up? But we got folks from departments all over the park"
-    "I see a few peeps from the lake rental shop talking to some of the conservation, sciencey folk….Crazy to see everyone at the same party."
+    "Huh, I didn't think this many park workers would even show up. But we got folks from departments all over the park!"
+    "I see a few peeps from the lake rental shop talking to some of the conservation, sciencey folk… Crazy to see everyone at the same party."
     "With so many different folks here, I wonder where my usual crew is. I push my way in and begin scanning the crowd."
     "Suddenly I spot the tips of a familiar pair of antlers poking out from the crowd over by the kitchen! "
     show ty casual at appearAndMove(0.02,0.5,1.0)
@@ -498,8 +499,8 @@ label DustinScene4:
     "The kitchen counter is loaded with food and snacks, and that's exactly where I find Ty sitting on a stool munching away at a slice of cheese pizza"
     show alby party at appearAndFlip(0.3) behind ty
     show reed party at appear(0.69) behind ty
-    "Behind the counter is Alby whose most of the way through a slice covered in toppings "
-    "Next to them is Reed, who is leaning nonchalantly against the same counter. They're pecking away at what I think is hummus and crackers."
+    "Behind the counter is Alby who’s most of the way through a slice covered in toppings"
+    "Next to them is Reed, leaning nonchalantly against the same counter. They're pecking away at what I think is hummus and crackers."
     show alby party at move(0.45,0.5) behind ty
     show ty casual at move(0.65,0.5)
     show reed party at move(0.85,0.5) behind ty
@@ -511,23 +512,23 @@ label DustinScene4:
 
     show dustin casual
 
-    "the little deer jumps a little and gently waves at me.  Alby's mouth is full of pizza but gives me a little nod of acknowledgement. Reed just smiles in my direction "
+    "The little deer jumps a little and gently waves at me.  Alby's mouth is full of pizza but gives me a little nod of acknowledgement. Reed just smiles in my direction."
 
     "Ty's a person of few words, and it can be hard to tell what's on his mind. Some people get frustrated by that but it never really bothers me at all. I know he's a cool dude through and through. "
     show ty casual talk
     ty "Hey"
     show ty casual
     show reed party talk
-    re "About time you made it here"
+    re "About time you made it here."
     show reed party talk
-    "Alby hurriedly swallows his mouth full of food before responding "
+    "Alby hurriedly swallows his mouth full of food before responding."
     show alby party talk
     al "Hey man, welcome to the chill oasis." 
 
-    al "Parties poppin off out there, so we set up refuge over here by the food." 
+    al "Parties poppin’ off out there, so we set up refuge over here by the food." 
     show alby party
     show dustin casual talk
-    du "oh fuck yeah, a land of snacks that are all ours!"
+    du "Oh fuck yeah, a land of snacks that are all ours!"
     show dustin casual
     "I grab a hand full of fish crackers from a bowl and toss em in my mouth"
     show ty casual talk
@@ -538,22 +539,22 @@ label DustinScene4:
     show dustin casual
     "I chuckle and grab some more crackers while Ty just gives me a blank stare."
     show reed party talk
-    re "I'm surprised by how many people showed up but man…. Marsh needs to put on some heavier music. How am I supposed to throw it back to this?"
+    re "Reed: I'm surprised by how many people showed up but man… Marsh needs to put on some heavier music. How am I supposed to throw it back to this?"
     show reed party
     show alby party talk
-    al "Maybe it's for the best, don't want this party to get too crazy. None of you guys are ready for me on the dance floor"
+    al "Maybe it's for the best, don't want this party to get too crazy. None of you guys are ready for me on the dance floor."
     show alby party
     show ty casual talk 
     ty "I'd love to see you guys dance."
     show ty casual
     show alby party talk
-    al "Oh yeah little man?  You gonna join us then? "
+    al "Oh yeah little man? You gonna join us then? "
     show alby party
     "ty seems to light up the tiniest bit as he silently ponders Alby's request, he takes another small bite of his pizza but his legs are kicking ever so slightly." 
 
     "I reach over and ruffle Ty's head fur a little bit."
     show dustin casual talk
-    du "Well i gotta join in too if you're out there ty, can't have you upstaging me. "
+    du "Well I gotta join in too if you're out there Ty. Can't have you upstaging me."
     show dustin casual
     "I swear he cracks a smile. I let out a loud laugh stepping away from the deer to join Reed in leaning against the counter."
 
@@ -570,16 +571,16 @@ label DustinScene4:
     re "Why pink? Why'd you dye your fur pink" 
     show reed party
     show alby party talk
-    al "You can't just ask someone why their pink Reed!" 
+    al "You can't just ask someone why they’re pink Reed!" 
     show alby party
     show ty casual talk
     ty "It's dyed?" 
     show ty casual
-    "I begin to sweat … oh god this is embarrassing. How do I explain this without making myself look like a total idiot? " 
+    "I begin to sweat… Oh god, this is embarrassing. How do I explain this without making myself look like a total idiot?" 
 
-    "Reed has a look in their eyes that tells me they are begging to know. So I suck up my pride" 
+    "Reed has a look in their eyes that tells me they are begging to know. So I suck up my pride." 
     show dustin casual frown talk
-    du "Ha, well … its supposed to be red actually."
+    du "Ha, well… it's supposed to be red actually."
     show dustin casual frown
     show reed party talk
     re "Red??? "
@@ -592,7 +593,7 @@ label DustinScene4:
     show dustin casual
     "Reed looks like they're about to have an aneurysm with how hard they're holding in their own laughter. "
 
-    "Alby is shaking his head low, but before he can respond, a very worn out bear approaches the counter"
+    "Alby is shaking his head low, but before he can respond, a very worn out bear approaches the counter."
 
     #Marsh-tanktop enters from left
     show alby party at move(0.6,0.5) behind ty
@@ -600,99 +601,99 @@ label DustinScene4:
     show reed party at move(0.95,0.5) behind ty
     show dustin casual at move(0.4,0.5)
     show marsh casual frown at appearAndMove(-0.2,0.1,0.5)
-    "Marsh looks like he ran a marathon, the bear sluggishly leaning against the counter to keep his balance, all while he scans his gaze across the crowd of people "
+    "Marsh looks like he ran a marathon, the bear sluggishly leaning against the counter to keep his balance, all while he scans his gaze across the crowd of people."
     show ty casual talk
-    ty "everything ok marsh?" 
+    ty "Everything ok, Marsh?" 
     show ty casual
     "He flashes a smile at Ty"
     show marsh casual talk
     ma "Yeah! Just making the rounds to see if everyone's doing good!" 
     show marsh casual
     show alby party talk
-    al "it's all goochi over here boss!" 
+    al "It's all Goochi over here, boss!" 
     show alby party
     show marsh casual frown talk 
-    ma "phew… that's good." 
+    ma "Phew… that's good." 
     
-    "He lets out a little sigh"
+    "He lets out a little sigh."
 
-    ma "happy to see everyone here but man… didn't expect this turn out"
+    ma "Happy to see everyone here, but man… didn't expect this turn out."
     show marsh casual frown
     show reed party talk
-    re " hell yeah man. We all needed the pick me up, nothing like celebrating what could be your final days of employment" 
+    re "Hell yeah, man. We all needed a pick me up. Nothing like celebrating what might be your last days of employment! " 
     show reed party
-    "Marsh looks worried"
+    "Marsh looks worried."
     show marsh casual frown talk
-    ma "well let's not go that far"
+    ma " Well, let's not go that far."
     show marsh casual frown
     show reed party talk
-    re "heh, our happiness is resistance, check this out"
+    re "Heh, our happiness is resistance. Check this out…"
     show reed party 
-    "Reed reels back cupping both hands to their beak"
+    "Reed reels back cupping both hands to their beak…"
     show reed party talk
     re "FUCK FELDT!" 
     show reed party
-    #Fade all sprites out
+    #MARMS idk how to make all the sprites fade out and fade in with out doing it all manually, is there an easy way to do it? 
 
-    "the room erupts as everyone excitedly replies in turn"
+    "The room erupts as everyone excitedly replies in turn!"
 
     "FUCK FELDT!!!!"
 
     #Fade sprites back in
     show reed party talk
-    re "fuck yeah, see were all here in combined opposition!" 
+    re "Fuck yeah, see? We're all here in combined opposition! " 
     show reed party
-    "marsh still has the worried look on his face"
+    "Marsh still has that worried look on his face."
     show marsh casual frown talk
-    ma "hahaha well .. I just wanted to lift everyone's spirits…. Not be a revolutionary"
+    ma "Hahaha well...I just wanted to lift everyone's spirits,not be a revolutionary…"
     show marsh casual frown
     show reed party talk
-    al "look at you, sticking it to the man on accident"
+    al "Look at you, sticking it to the man on accident."
     show reed party
     "Marsh sighs and continues scanning the crowd." 
 
     "Reed seems to notice this." 
     show reed party talk
-    re "Hey big guy, what's goin on with you?" 
+    re "Hey big guy, what's goin’ on with you?" 
     show reed party
     show marsh casual frown talk
-    ma "Have any of you guys seen tibbs tonight at all?" 
+    ma "Have any of you guys seen Tibbs tonight at all?" 
     show marsh casual frown
-    "We all look amongst each other, in this entire crowd of people tibbs ‘ absence is a little striking." 
+    "We all look amongst each other, in this entire crowd of people Tibbs’ absence is a little striking." 
     show alby party talk
-    al "haven't seen him"
+    al "Haven't seen ‘im."
     show alby party
     show reed party talk
-    re "me either"
+    re "Me neither."
     show reed party
     show ty casual talk
-    ty "nope"
+    ty "Nope."
     show ty casual
-    "Marsh seems to deflate, his worried look growing into sadness" 
+    "Marsh seems to deflate, his worried look growing into sadness." 
     show dustin casual talk
     du "Hey boss bear,  is something wrong with you and tibbs?" 
     show dustin casual
     show marsh casual frown talk
-    ma "He's been a little squirly about this whole party. He said he would be here but…. He just seemed so distant." 
+    ma "He's been a little squirrely about this whole party. He said he would be here but…He just seemed so distant." 
     show marsh casual frown
     show dustin casual talk
-    du "no offense but … isn't that how he always is?" 
+    du "No offence, but … isn't that how he always is?" 
     show dustin casual
-    "The kermode lets out a small chuckle"
+    "The kermode lets out a small chuckle."
     show marsh casual frown talk
-    ma "yeah, but this is… different." 
+    ma "Yeah, but this is… different." 
     show marsh casual frown talk
     ma "I really hope I haven't upset him" 
     show marsh casual frown
-    "Reed steps up to the bear and puts their hand on his shoulder" 
+    "Reed steps up to the bear and puts their hand on his shoulder." 
     show reed party talk
-    re "Hey hey, I'm sure Tibbs isnt mad. He's probably just as stressed as we all are" 
+    re "Hey hey, I'm sure Tibbs isn't mad. He's probably just as stressed as we all are." 
     show reed party
-    "Marsh lets out a sigh and nods"
+    "Marsh lets out a sigh and nods."
     show reed party talk
-    re "here let's grab some drinks and take a stroll outside, you need to get away from the crowd." 
+    re "Here, let's grab some drinks and take a stroll outside. You need to get away from the crowd. " 
     
-    re "Ty you should join us"
+    re "Ty, you should join us."
     show reed party
     ty "I'll be right there!"
 
@@ -709,46 +710,46 @@ label DustinScene4:
     hide ty casual
     show dustin casual at move(0.3,1.0)
     show alby party at move(0.7,1.0)
-    "Now it's just me and Alby at the counter, and there's a sinister grin on his face. I narrow my eyes at him and cross my arms"
+    "Now it's just me and Alby at the counter, and there's a sinister grin on his face. I narrow my eyes at him and cross my arms."
     show dustin casual frown talk
     du "What?" 
     show dustin casual frown
     show alby party talk
-    al "Why don't you turn around and look towards the back door"
+    al "Why don't you turn around and look towards the back door?"
     show alby party
     "Turning around I scan the crowded room trying to see what Alby is talking about."
 
-    "That's when a flash of grey causes my fur to stand on end, and the world seems to slow down"
+    "That's when a flash of grey causes my fur to stand on end, and the world seems to slow down."
 
-    "Standing alone near the back door is Gavin. He's got a cup in hand, frozen in place like a stoic Greek statue" 
+    "Standing alone near the back door is Gavin. He's got a cup in hand, frozen in place like a stoic Greek statue." 
 
     "His fur seems to glow under the party lights, the shadows defining every muscle in his large arms and chest." 
 
     "I stand transfixed by him, caught in a spell, when I feel a hand push against my back and I'm pulled out of it." 
 
-    "Alby gives me a little shove pushing me forward"
+    "Alby gives me a little shove pushing me forward."
     show alby party talk
     al "Ok man, now's your chance!" 
     show alby party
     show dustin casual frown talk
-    du "listen I don't think this is a good idea"
+    du "Listen, I don't think this is a good idea!"
     show dustin casual frown
     show alby party talk
-    al "nonsense duderino"
+    al "Nonsense duderino."
     show alby party
     "He grabs my hand and begins to guide me through the crowd." 
     show alby party talk
     al "I know you. I know you can talk to him."
 
-    al "hell just last week I saw you lay on the moves to that handsome tourist." 
+    al "Hell, just last week I saw you lay on the moves to that handsome tourist." 
     show alby party
     show dustin casual frown talk
     du "That's different! "
     show dustin casual frown
     show alby party talk
-    al "pfft, hardly! Just remember what we talked about. Treat him like you would any of us." 
+    al "Pfft, hardly! Just remember what we talked about. Treat him like you would any of us." 
     show alby party
-    "And before I could protest, I was standing in front of him" 
+    "And before I could protest, I was standing in front of him." 
     show dustin casual frown at move (0.2,1.0)
     show alby party at move (0.9,1.0)
     show gavin shirt behind alby with Dissolve(0.3) 
@@ -761,9 +762,9 @@ label DustinScene4:
     show alby party talk
     al "HEYYYY GAVIN, MY MAN!!!" 
     show alby party
-    "he shifts his gaze towards the two of us, his brown eyes  lingering on me even though Alby is the one talking." 
+    "He shifts his gaze towards the two of us, his brown eyes lingering on me even though Alby is the one talking." 
     show alby party talk
-    al "how's the party been, big guy! It's nice to see you here!" 
+    al "How's the party been, big guy! It's nice to see you here!" 
     show alby party
     ga "Mhm." 
 
@@ -773,11 +774,11 @@ label DustinScene4:
     show alby party 
     "The skunk pushes me forward and the badger nods"
     show alby party talk
-    al "My boy here is the life of ANY party! Go one Dustin, why don't you tell Gavin here the story about the water hose, and I'll be back with some fresh drinks!" 
+    al " My boy here is the life of ANY party! Go on Dustin, why don't you tell Gavin here the story about the water hose, and I'll be back with some fresh drinks!" 
     show alby party
-    "Alby whispers into my ear 'knock em dead' before nimbly snatching the cup outta Gavin's and and sauntering off into the sea of people. "
+    "Alby whispers into my ear ‘Knock ‘em dead’ before nimbly snatching the cup outta Gavin's and and wandering off into the sea of people."
     hide alby party with Dissolve(0.3)
-    "It's just us"
+    "It's just us."
 
     "The music fades out and it's just the sound of people talking" 
 
@@ -787,19 +788,19 @@ label DustinScene4:
 
     "Come on, say something you big idiot! Think, what does Gavin like?" 
 
-    "Uh… Cars? Movies?..... Power tools? Oh please now I'm just guessing." 
+    "Uh… Cars? Movies……? Power tools? Oh please, now I'm just guessing." 
 
     "The world feels like it twists and turns. The sound of people around me reaching a fever pitch while the music becomes jumbled noise." 
 
     "Why can't I breathe? What is this? Any attempt at movement or speaking fails me. My body won't respond no matter how hard I try." 
 
-    "My eyes dart around and I see Gavin. His grimace causes my heart to sink. I'm fucking this up again. Just like I always do"
+    "My eyes dart around and I see Gavin. His grimace causes my heart to sink. I'm fucking this up again, just like I always do."
 
-    "My vision starts to blur, weather it's tears or my nerves I can't tell but I'm helpless to stop it"
+    "My vision starts to blur, whether it's tears or my nerves I can't tell, but I'm helpless to stop it."
 
     "I need to right the ship, I can't lose this moment!" 
 
-    "Please, just Say. Anything!"  
+    "Please… just… say…anything!"  
 
     "Through my blurred and frantic vision something catches my attention." 
 
@@ -810,36 +811,36 @@ label DustinScene4:
 
     show comic17 with Dissolve(1.0)
 
-    "Something huge is walking through the forest, it's tall and wide. Wider than any person I've ever seen. A top what I imagine is its head are .. horns? It moves with lumbering steps into the woods, I catch it's glowing eyes as it moves behind a tree"
+    "Something huge is walking through the forest. It's tall and wide, wider than any person I've ever seen. Atop what I imagine to be its head are .. horns? It moves with lumbering steps into the woods. I catch a glimpse of it’s glowing eyes as it moves behind a tree."
 
     du "WHAT IS THAT!?" 
   
-    "My body moves on its own. Pointing toward the back door"
+    "My body moves on its own pointing toward the back door."
 
     "Gavin jumps in response, his grimace replaced with fear and confusion." 
 
-    "I don't even think, dashing for the door and  running out into the night"
+    "I don't even think, dashing for the door and running out into the night…"
     hide comic17
     #Forest night background, it's quiet
     scene bg forest deepdark with dissolve
     show dustin casual frown at appearAndMove (.9,0.5,0.3)
-    "Where is it? Where is …. My breathing is heavy, its like Ive been holding my breath for ages. My heart is pounding, and I'm spinning in circles looking for … for"
+    "Where is it? Where is …My breathing is so heavy, it’s like I've been holding my breath for ages. My heart is pounding, and I'm spinning in circles looking for … for…"
 
     "Oh god"
 
     "What have I done"
 
-    "I'm. A. Fucking. IDIOT"
+    "I'm. A. Fucking. IDIOT!"
 
-    "Anger, frustration, confusion, sadness. It all wells up within me and I can't hold it back anymore"
+    "Anger, frustration, confusion, sadness. It all wells up within me and I can't hold it back anymore…"
     show dustin casual frown talk
     du "GOD DAMN IT!"
     show dustin casualnh frown zorder 100 at hop
-    "I scream into the night, ripping my hat off my head I throw it to the ground with all my might"
+    "I scream into the night. Ripping my hat off my head, I throw it to the ground with all my might!"
 
     #dustin hatless sprites
 
-    "The tears rolled down my face, nothing I could do could stop them.  Why can't I do this? Why am I so useless? A single word, why can't I say just one single fucking word?" 
+    "The tears rolled down my face, nothing I could do could stop them. Why can't I do this? Why am I so useless? A single word… Why can't I say just one single fucking word?" 
 
     "???: Hey!" 
 
@@ -859,42 +860,44 @@ label DustinScene4:
     show gavin shirt
     "What? His voice is stern but concerned." 
     show gavin shirt talk
-    ga "It's impossible for me to miss how you glare, and run away from me. So tell me. Have I upset you in any way?" 
+    ga " I see the way you look at me, and run away from me. So tell me. Did I upset you somehow?" 
     show gavin shirt
     "Upset me? This throws me completely off balance. He's the one who should be upset!" 
     show gavin shirt talk
-    ga "I volunteer my services to this park out of kindness and belief in its mission. The last thing I wanna do is cause  problems with the staff." 
+    ga "Because I volunteer my services to this park out of kindness and belief in its mission. The last thing I wanna do is cause y'all problems." 
     show gavin shirt
     "My breathing stops"
     show gavin shirt talk
-    ga "I would appreciate it if you were upfront with me, so I can fix this. Otherwise, I'll excuse myself and let one of my other team members take the lead here." 
+    ga "And I would appreciate it if you were upfront with me, so that I can actually fix this. Otherwise, I'm just gonna get outta y'all's way and let someone else take charge." 
     show gavin shirt
     show dustin casualnh frown talk
     du "N-no!" 
     show dustin casualnh frown
-    "The words leapt from my mouth"
+    "The words leapt from my mouth."
     show gavin shirt talk
-    ga "no?" 
+    ga "No?" 
     show gavin shirt
     show dustin casualnh frown talk
-    du "you haven't done anything wrong"
+    du "You haven't done anything wrong"
     show dustin casualnh frown
-    "Gavin's eye brows raise, and he crosses his arms" 
+    "Gavin's eyebrows raise, and he crosses his arms." 
     show dustin casualnh frown talk
-    du "please I promise, I'm not upset I'm just … I don't know?" 
+    du "Please I promise, I'm not upset I'm just… I don't know?" 
     show dustin casualnh frown
     show gavin shirt talk
-    ga "You don't know? You're not making a lick of sense young man." 
+    ga "You're not making a lick of sense, young man." 
     show gavin shirt
     "The words seem to get caught in my throat again, my body trying to freeze up. But I grab these feelings, and tear them apart." 
 
-    "I'm here, talking to him, I. Need. To. Move!" 
+    "I'm here, talking to him… I. Need. To. Move! " 
+    show gavin shirt talk
+    ga "Alright, w– "
     show dustin casualnh frown talk
     du "I'm afraid!" 
     show dustin casualnh frown
     "Gavin cocks his head at that."
     show gavin shirt talk
-    ga "Afraid?" 
+    ga "Afraid of what?" 
     show gavin shirt
     show dustin casualnh frown talk
     du "That, you won't like me. That if I open my mouth you're gonna hate me!" 
@@ -908,32 +911,32 @@ label DustinScene4:
     ga "I get it now." 
     show gavin shirt
     show dustin casualnh frown talk
-    du "you do?, cause I sure don't" 
+    du "You do?’Cause I sure don't" 
     show dustin casualnh frown
     show gavin shirt talk
     ga "Son, I can't reject you if I don't know you." 
     show gavin shirt
-    "Rejection…. That's it!" 
+    "Rejection… That's it!" 
     show gavin shirt talk
-    ga "If you really want to get to know me. Take the first step. Because if you don't you will live with something worse than fear, regret." 
-
-    ga "And listen, I don't know you. But I've heard many things from many people about you." 
+    ga "Communication is a two-way street, and you gotta meet me in the middle. Take the first step. 'Cause if you don't, you're gonna live with something worse than fear... regret." 
+    "His tone seems to soften, and he looks me in the eyes"
+    ga "And listen, I don't know you. But I have heard many things from many people about you." 
     show gavin shirt
     "I feel my heart shake, getting ready to drop" 
     show dustin casualnh frown talk
-    du "o-oh yeah?" 
+    du "O-oh yeah?" 
     show dustin casualnh frown
     show gavin shirt talk
-    ga "lots of very good things, and personally speaking"
+    ga "Lots of very good things, and... personally speaking…"
 #for marsh or marms, I need to make a new gavin sprite for here, put him looking away here when its ready
     "Gavin looks away from me"
 
-    ga "I would like to get to know you as well"
+    ga "I would like to get to know you…"
     show gavin shirt 
     show dustin casualnh
     "My heart, which was ready to fall instead rises into the sky. Did I hear that correctly?"
 
-    "But as if sensing my elation and wanting to bring me back to reality, Gavin continues"
+    "But as if sensing my elation and wanting to bring me back to reality, Gavin continues."
     show gavin shirt talk
     ga "BUT this running away and hiding stuff isn't gonna cut it!" 
 
@@ -943,7 +946,7 @@ label DustinScene4:
     show dustin casualnh talk
     du "Y-yeah! I got it! I promise!"
     show dustin casualnh
-    "Gavin softens and relaxes, once I again I can't tell his he's smiling but I feel a warmth come from him"
+    "Gavin softens and relaxes, once again I can't tell if he's smiling but I feel a warmth come from him."
     show gavin shirt talk
     ga "Good! I can't wait to have a proper conversation with you!" 
     hide gavin shirt with Dissolve(0.9)
@@ -956,9 +959,9 @@ label DustinScene4:
     show dustin casualnh
     "Holy shit holy shit, I did it, I talked to him! "
 
-    "I talked to him and, and, he said hes been wanting to get to know Me!!!???" 
+    "I talked to him and, and, he said he's been wanting to get to know… me!!!??? " 
 
-    "I can't hold it in as I spin and jump in place like a child getting a new toy." 
+    "I can't hold it in as I spin and jump in place like a kid getting a new toy." 
 
     "In the grand scheme of things it's a small step but it's a step regardless." 
 
@@ -973,28 +976,28 @@ label DustinScene4:
     show tibbs shadow at move(0.2,0.8)
     "Something large steps out of the trees and brush towards me. I fall back on my ass as I try to scramble back away from it!"
 
-    "It's tall and lanky, with dark brown fur and it's radiating a sinister aura that's so think I could cut it with a knife….. wait a second"
+    "It's tall and lanky, with dark brown fur and it's radiating a sinister aura that's so thick I could cut it with a knife… wait a second."
 
     #Fade in tibbs center screen
     show dustin casual frown talk
     du "TIBBS?" 
     show dustin casual frown
     show tibbs zorder 100 at hop
-    "Tibbs jumps in response, he almost looks… guilty? Like I caught him doing something he should"
+    "Tibbs jumps in response, he almost looks… guilty? Like I caught him doing something he shouldn't have been."
     show tibbs talk
     ti "Dustin?"
     show tibbs
     show dustin casual frown talk
-    du "What are you doin man? Marsh has been looking for you?" 
+    du "Dustin: What are you doin man? Marsh has been looking for you!" 
     show dustin casual frown
-    "Tibbs is glancing around frantically, yeah I definitely caught him sneaking around. Is he… avoiding marsh?" 
+    "Tibbs is glancing around frantically… Yeah, I definitely caught him sneaking around. Is he… avoiding marsh?" 
     #FOR MARMS, can you make tibbs flip around a few times here
     show tibbs talk
-    ti "yeah, uh sorry … there was something i had to uh, take care of back there. I'll get back inside right away"
+    ti "Yeah, uh, sorry… there was something I had to, uh, take care of back there. I'll get back inside right away."
 
-    ti "you should get back as well, it's not the safest out here alone."
+    ti "You should get back in as well. It's not the safest out here alone."
     show tibbs
-    "I nod in agreement and follow tibbs back towards the cabin, though I swear I see him looking over his shoulder several times." 
+    "I nod in agreement and follow Tibbs back towards the cabin, though I swear I see him looking over his shoulder several times." 
     scene black with fade
     scene bg marsh cabin interior with fade
     #Fade transitions back into the party, Dustin and tibbs enter from left. 
@@ -1002,7 +1005,7 @@ label DustinScene4:
     "The party has wound down by now, many of the guests have left, with the remaining party goers chatting away in the corners of the room." 
     show tibbs at appearAndMove (0.9,-0.2,0.7) 
     show dustin casual at appearAndMove (0.9,0.5,1)
-    "Tibbs be lines it away from me with out a word, he must be looking for Marsh, I'm not alone for long tho as Alby comes swooping in" 
+    "Tibbs bee lines it away from me without a word, he must be looking for Marsh, I'm not alone for long tho as Alby comes swooping in." 
     hide tibbs
     show dustin casual at move (.7,.9)
     show alby party frown talk at appearAndMove (-0.2,0.3,0.9)
@@ -1011,7 +1014,7 @@ label DustinScene4:
     al "Where did you go man? I leave for five seconds and you're gone?" 
     show alby party frown
     show dustin casual talk
-    du "Ha, yeah… so I kinda freaked out and ran outside"
+    du "Hah, yeah… so I kinda freaked out and ran outside…"
     show dustin casual
     show alby party frown talk
     al "Dude…" 
@@ -1022,7 +1025,7 @@ label DustinScene4:
     al "You think?"
     show alby party frown
     show dustin casual talk
-    du "yeah, he said he wants to get to know me more"
+    du "Yeah, he said he wants to get to know me more!"
     show dustin casual
     show alby party at move (0.5,0.4) behind dustin
     "Alby's large hand slaps me in the back hard, throwing me off balance." 
@@ -1032,11 +1035,11 @@ label DustinScene4:
     show dustin casual frown talk
     du "Yeah, no thanks to you! You left me stranded!" 
     show alby party talk
-    al "sometimes an eaglet needs to be pushed outta the best to soar my friend"
+    al "Sometimes an eaglet needs to be pushed outta the nest to soar, my friend."
     show alby party
-    "I can't with him sometimes. I groan and give the large skunk a little shove, it does nothing to move his large body"
+    "I can't with him sometimes. I groan and give the large skunk a little shove and it does nothing to move his large body."
     show alby party talk
-    al "cheer up, it all worked out right?  Come on, let's get back in there.  We gotta tell the others  the good news!" 
+    al "Cheer up, it all worked out right? Come on, let's get back in there. We gotta tell the others the good news! " 
     show alby party at move (-0.2,1.0)
     show dustin casual at move(-0.2,1.0)
     scene black with fade 
