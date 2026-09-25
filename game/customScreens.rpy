@@ -20,6 +20,11 @@ screen emoteHandler:
         align (0,0)
         hover "gui/secretButtonHover.png"
 
+screen phoneEasterEgg:
+    imagebutton idle "gui/secretButton.png" action [Show("phoneEasterEggView", emoteName="tibbsEmote")]:
+        align (0.47,0.3)
+        hover "gui/secretButtonHover.png"
+
 screen emoteHandlerCopy:
     frame:
         xpadding 10
@@ -31,6 +36,11 @@ screen emoteHandlerCopy:
 screen emoteView(emoteName):
     add emoteName at emotePath
     timer 0.5 action [Hide("emoteView")]
+    on "show" action Play("channelEmote","SFX_kiss.ogg")
+
+screen phoneEasterEggView(emoteName):
+    #add emoteName at emotePath
+    timer 0.5 action [Hide("phoneEasterEggView")]
     on "show" action Play("channelEmote","SFX_kiss.ogg")
 
 screen inputBlocker:

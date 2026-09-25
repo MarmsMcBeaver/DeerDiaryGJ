@@ -329,6 +329,7 @@ label DustinScene3:
     show alby
     #this should slide in from bottom
     show comic15 at itemAppear(0.5,0.5,0.8)
+    show screen phoneEasterEgg
     #"to find the unexplained' is written above it with 'expedition 180-the breaktrail beast' Below it. Clicking on this will play audio from the episode as an easter egg"
     "A paranormal podcast? Didn't expect Alby to be into silly things like this? I don't put much stock into bigfoots and kappas. Sure they're fun stories but there's no way they are real... Right? "
     "The thought of an actual monster at Break Trail sends a shiver up my spine. I let out a nervous laugh in an attempt to steel my nerves"
@@ -340,6 +341,7 @@ label DustinScene3:
     du "'Mothman, my secret ex-lover! Not click bait!' "
     show dustin
     show comic15 at itemDisappear(0.8)
+    hide screen phoneEasterEgg
     "Alby cracks a smile, and I swear I hear reed stifling a chuckle. Making my friends laugh fills me with a small bit of pride."
     hide comic15
     show alby talk
@@ -398,6 +400,8 @@ label DustinScene4:
     show alby behind dustin at appearAndMove(-0.4,0.25, 2.0) 
     "We both wave goodbye to the bird. Alby and I stand in silence for a bit as Reed turns out of sight towards the campground. "
     hide reed
+    show dustin frown at move(0.5,0.0001)
+    pause 0.1
     show dustin frown at hop
     "Alby catches me off guard with a chuckle and a punch to the shoulder that was way harder than it needed to be… Definitely pay back from earlier."
     show alby talk
@@ -493,12 +497,13 @@ label DustinScene4:
     "I see a few peeps from the lake rental shop talking to some of the conservation, sciencey folk… Crazy to see everyone at the same party."
     "With so many different folks here, I wonder where my usual crew is. I push my way in and begin scanning the crowd."
     "Suddenly I spot the tips of a familiar pair of antlers poking out from the crowd over by the kitchen! "
-    show ty casual at appearAndMove(0.02,0.5,1.0)
+    show ty casual at appearAndMove(1.1,0.5,1.0)
     #Ty casual clothes, reed party clothes, Alby party clothes, slide on screen from the right side
     "I nudge and push my way through the crowd. "
     "The kitchen counter is loaded with food and snacks, and that's exactly where I find Ty sitting on a stool munching away at a slice of cheese pizza"
     show alby party at appearAndFlip(0.3) behind ty
     show reed party at appear(0.69) behind ty
+    with dissolve
     "Behind the counter is Alby who’s most of the way through a slice covered in toppings"
     "Next to them is Reed, leaning nonchalantly against the same counter. They're pecking away at what I think is hummus and crackers."
     show alby party at move(0.45,0.5) behind ty
@@ -511,6 +516,7 @@ label DustinScene4:
     du "Ty guy! Alberto! Reedus!"  
 
     show dustin casual
+    show ty casual at hop
 
     "The little deer jumps a little and gently waves at me.  Alby's mouth is full of pizza but gives me a little nod of acknowledgement. Reed just smiles in my direction."
 
@@ -520,7 +526,7 @@ label DustinScene4:
     show ty casual
     show reed party talk
     re "About time you made it here."
-    show reed party talk
+    show reed party
     "Alby hurriedly swallows his mouth full of food before responding."
     show alby party talk
     al "Hey man, welcome to the chill oasis." 
@@ -563,7 +569,7 @@ label DustinScene4:
     "As I lean with them they give me a look up and down with a sly smirk."
     show reed party talk
     re "So I've been wanting to ask you this for a while. "
-    show reed party talk
+    show reed party
     show dustin casual talk
     du "Hmm?" 
     show dustin casual
@@ -614,9 +620,9 @@ label DustinScene4:
     show alby party
     show marsh casual frown talk 
     ma "Phew… that's good." 
-    
+    show marsh casual
     "He lets out a little sigh."
-
+    show marsh casual frown talk 
     ma "Happy to see everyone here, but man… didn't expect this turn out."
     show marsh casual frown
     show reed party talk
@@ -634,12 +640,20 @@ label DustinScene4:
     re "FUCK FELDT!" 
     show reed party
     #MARMS idk how to make all the sprites fade out and fade in with out doing it all manually, is there an easy way to do it? 
-
+    hide alby
+    hide ty
+    hide reed 
+    hide dustin 
+    hide marsh 
+    with dissolve
     "The room erupts as everyone excitedly replies in turn!"
-
     "FUCK FELDT!!!!"
-
-    #Fade sprites back in
+    show alby party at appearAndFlip(0.6) behind ty
+    show ty casual at appear(0.8)
+    show reed party at appear(0.95) behind ty
+    show dustin casual at appear(0.4)
+    show marsh casual frown at appear(0.1)
+    with dissolve
     show reed party talk
     re "Fuck yeah, see? We're all here in combined opposition! " 
     show reed party
@@ -717,8 +731,9 @@ label DustinScene4:
     show alby party talk
     al "Why don't you turn around and look towards the back door?"
     show alby party
+    show dustin casual frown at lookAround(3,-1)
     "Turning around I scan the crowded room trying to see what Alby is talking about."
-
+    show dustin casual at moveAndUnFlip(0.3,1.0)
     "That's when a flash of grey causes my fur to stand on end, and the world seems to slow down."
 
     "Standing alone near the back door is Gavin. He's got a cup in hand, frozen in place like a stoic Greek statue." 
@@ -754,7 +769,6 @@ label DustinScene4:
     show alby party at move (0.9,1.0)
     show gavin shirt behind alby with Dissolve(0.3) 
   
-    #Gavin sprite fades in center screen 
 
     "There he was, standing by himself near the back screen door." 
 
@@ -806,12 +820,14 @@ label DustinScene4:
 
     "Through the screen door behind Gavin, I see movement." 
 
-    hide gavin shirt with Dissolve(0.3)
-    hide dustin casual frown with Dissolve(0.3)
+    hide gavin shirt
+    hide dustin casual frown 
+    with Dissolve(0.3)
 
     show comic17 with Dissolve(1.0)
 
-    "Something huge is walking through the forest. It's tall and wide, wider than any person I've ever seen. Atop what I imagine to be its head are .. horns? It moves with lumbering steps into the woods. I catch a glimpse of it’s glowing eyes as it moves behind a tree."
+    "Something huge is walking through the forest. It's tall and wide, wider than any person I've ever seen. Atop what I imagine to be its head are .. horns?" 
+    "It moves with lumbering steps into the woods. I catch a glimpse of it’s glowing eyes as it moves behind a tree."
 
     du "WHAT IS THAT!?" 
   
@@ -842,7 +858,7 @@ label DustinScene4:
 
     "The tears rolled down my face, nothing I could do could stop them. Why can't I do this? Why am I so useless? A single word… Why can't I say just one single fucking word?" 
 
-    "???: Hey!" 
+    unknown "Hey!" 
 
     "A deep voice cuts through the quiet night, pulling me back into the present." 
     show dustin casualnh frown at move (.3,0.8)
@@ -870,7 +886,7 @@ label DustinScene4:
     show gavin shirt talk
     ga "And I would appreciate it if you were upfront with me, so that I can actually fix this. Otherwise, I'm just gonna get outta y'all's way and let someone else take charge." 
     show gavin shirt
-    show dustin casualnh frown talk
+    show dustin casualnh frown talk at hop
     du "N-no!" 
     show dustin casualnh frown
     "The words leapt from my mouth."
@@ -968,7 +984,7 @@ label DustinScene4:
     "With a deep breath I compose myself, though I can't stop my tail from wagging." 
 
     #dustin hatsprite
-    show dustin casual
+    show dustin casual at hop
     "Grabbing my hat from the ground, I hear a rustling from the woods behind me"
     show tibbs shadow at appearAndFlip(-0.4)
     "Oh shit that's right, the thing I saw!"
@@ -988,11 +1004,10 @@ label DustinScene4:
     ti "Dustin?"
     show tibbs
     show dustin casual frown talk
-    du "Dustin: What are you doin man? Marsh has been looking for you!" 
+    du "What are you doin man? Marsh has been looking for you!" 
     show dustin casual frown
     "Tibbs is glancing around frantically… Yeah, I definitely caught him sneaking around. Is he… avoiding marsh?" 
-    #FOR MARMS, can you make tibbs flip around a few times here
-    show tibbs talk
+    show tibbs talk at lookAround(2,-1)
     ti "Yeah, uh, sorry… there was something I had to, uh, take care of back there. I'll get back inside right away."
 
     ti "You should get back in as well. It's not the safest out here alone."
@@ -1000,8 +1015,6 @@ label DustinScene4:
     "I nod in agreement and follow Tibbs back towards the cabin, though I swear I see him looking over his shoulder several times." 
     scene black with fade
     scene bg marsh cabin interior with fade
-    #Fade transitions back into the party, Dustin and tibbs enter from left. 
-    
     "The party has wound down by now, many of the guests have left, with the remaining party goers chatting away in the corners of the room." 
     show tibbs at appearAndMove (0.9,-0.2,0.7) 
     show dustin casual at appearAndMove (0.9,0.5,1)
@@ -1009,19 +1022,18 @@ label DustinScene4:
     hide tibbs
     show dustin casual at move (.7,.9)
     show alby party frown talk at appearAndMove (-0.2,0.3,0.9)
-    #Alby from right
-    
     al "Where did you go man? I leave for five seconds and you're gone?" 
     show alby party frown
     show dustin casual talk
     du "Hah, yeah… so I kinda freaked out and ran outside…"
     show dustin casual
-    show alby party frown talk
+    show alby party frown
     al "Dude…" 
     show alby party frown
     show dustin casual talk
     du  "No wait! It all worked out though! Me and Gavin had a talk, and it went well… I think?" 
     show alby party frown talk
+    show dustin casual 
     al "You think?"
     show alby party frown
     show dustin casual talk
@@ -1035,12 +1047,13 @@ label DustinScene4:
     show dustin casual frown talk
     du "Yeah, no thanks to you! You left me stranded!" 
     show alby party talk
+    show dustin casual
     al "Sometimes an eaglet needs to be pushed outta the nest to soar, my friend."
     show alby party
     "I can't with him sometimes. I groan and give the large skunk a little shove and it does nothing to move his large body."
     show alby party talk
     al "Cheer up, it all worked out right? Come on, let's get back in there. We gotta tell the others the good news! " 
-    show alby party at move (-0.2,1.0)
+    show alby party at moveAndFlip (-0.2,1.0)
     show dustin casual at move(-0.2,1.0)
     scene black with fade 
     hide alby party
